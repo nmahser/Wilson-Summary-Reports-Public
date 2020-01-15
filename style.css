@@ -1,0 +1,66 @@
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  color: #555;
+  cursor: default;
+  background-color: #edc70a;
+  border: 1px solid #ddd;
+  border-bottom-color: rgb(221, 221, 221);
+  border-bottom-color: transparent;
+}
+
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+
+body{
+  font-family: Helvetica;
+  font-size:14pt;
+}
+
+
+h2,h3,h4,h5,h6{
+  font-size: 12pt;
+  text-align:left;
+  font-weight: bold;
+  color: rgb(138, 136, 136);
+}
+
+
+h1{
+  font-size: 14pt;
+  text-align:center;
+  font-weight: bold;
+  color: rgb(92, 92, 92)
+}
+
+
+ .column-left{
+    float: left;
+    width: 33%;
+    text-align: left;
+  }
+.column-center{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.column-right{
+  float: right;
+  width: 33%;
+  text-align: right;
+}

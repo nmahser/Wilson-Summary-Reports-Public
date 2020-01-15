@@ -1,0 +1,3333 @@
+
+Attaching package: ‘gmailr’
+
+The following object is masked from ‘package:utils’:
+
+    history
+
+The following objects are masked from ‘package:base’:
+
+    body, date, labels, message
+
+
+Attaching package: ‘rmarkdown’
+
+The following object is masked from ‘package:gmailr’:
+
+    draft
+
+
+Attaching package: ‘dplyr’
+
+The following object is masked from ‘package:gmailr’:
+
+    id
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:gmailr’:
+
+    date
+
+The following object is masked from ‘package:base’:
+
+    date
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:reshape2’:
+
+    smiths
+
+
+Attaching package: ‘chron’
+
+The following objects are masked from ‘package:lubridate’:
+
+    days, hours, minutes, seconds, years
+
+
+Attaching package: ‘rowr’
+
+The following objects are masked from ‘package:dplyr’:
+
+    coalesce, count
+
+NULL
+NULL
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1c0a77ef2ea3.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpdJuRhJ/rmarkdown-str1c0a2816e8a7.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-07/House 8.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1c0a3c0454b4.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpdJuRhJ/rmarkdown-str1c0ad7d0837.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-07/House 10.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1c0a41e3c808.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpdJuRhJ/rmarkdown-str1c0a52c2062c.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-07/House 13.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1c0a4baa9338.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpdJuRhJ/rmarkdown-str1c0a148a543e.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-07/House 28.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1c0a67254dc2.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpdJuRhJ/rmarkdown-str1c0a681a25f2.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-07/House 51.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1c0a69b72a21.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpdJuRhJ/rmarkdown-str1c0a445eb875.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-07/House 52.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1c0a474568e1.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpdJuRhJ/rmarkdown-str1c0a5bb24a67.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-07/House 53.html
+[1] "House 53 's report wasn't generated"
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1c0a63f9ee27.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpdJuRhJ/rmarkdown-str1c0a58eeca4d.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-07/House 54.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1c0a1a331e5f.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpdJuRhJ/rmarkdown-str1c0a74d60977.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-07/House 56.html
+There were 50 or more warnings (use warnings() to see the first 50)
+  adding: 2019-06-07/ (stored 0%)
+  adding: 2019-06-07/House 51.html (deflated 68%)
+  adding: 2019-06-07/House 13.html (deflated 68%)
+  adding: 2019-06-07/House 52.html (deflated 68%)
+  adding: 2019-06-07/House 53.html (deflated 68%)
+  adding: 2019-06-07/House 54.html (deflated 68%)
+  adding: 2019-06-07/House 8.html (deflated 68%)
+  adding: 2019-06-07/House 28.html (deflated 68%)
+  adding: 2019-06-07/House 10.html (deflated 68%)
+  adding: 2019-06-07/House 56.html (deflated 68%)
+Id: 16b35026243765a9
+To: 
+From: 
+Date: 
+Subject: 
+ 
+[1] TRUE
+
+Attaching package: ‘gmailr’
+
+The following object is masked from ‘package:utils’:
+
+    history
+
+The following objects are masked from ‘package:base’:
+
+    body, date, labels, message
+
+
+Attaching package: ‘rmarkdown’
+
+The following object is masked from ‘package:gmailr’:
+
+    draft
+
+
+Attaching package: ‘dplyr’
+
+The following object is masked from ‘package:gmailr’:
+
+    id
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:gmailr’:
+
+    date
+
+The following object is masked from ‘package:base’:
+
+    date
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:reshape2’:
+
+    smiths
+
+
+Attaching package: ‘chron’
+
+The following objects are masked from ‘package:lubridate’:
+
+    days, hours, minutes, seconds, years
+
+
+Attaching package: ‘rowr’
+
+The following objects are masked from ‘package:dplyr’:
+
+    coalesce, count
+
+NULL
+NULL
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc45986588e423.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpNZI8dE/rmarkdown-str45984833a851.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-10/House 8.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4598173d73e8.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpNZI8dE/rmarkdown-str4598747008a2.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-10/House 10.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc459849536f82.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpNZI8dE/rmarkdown-str459815257d9e.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-10/House 13.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc459814569f3c.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpNZI8dE/rmarkdown-str45986b364c7d.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-10/House 28.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc459836594224.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpNZI8dE/rmarkdown-str45984d40b83b.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-10/House 51.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4598305a61dd.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpNZI8dE/rmarkdown-str45982a9ee662.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-10/House 52.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc45981356f2b8.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpNZI8dE/rmarkdown-str4598237b2b6f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-10/House 53.html
+[1] "House 53 's report wasn't generated"
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc459829b7489c.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpNZI8dE/rmarkdown-str4598443c4487.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-10/House 54.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc45981975a004.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpNZI8dE/rmarkdown-str459821301309.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-10/House 56.html
+There were 50 or more warnings (use warnings() to see the first 50)
+  adding: 2019-06-10/ (stored 0%)
+  adding: 2019-06-10/House 51.html (deflated 68%)
+  adding: 2019-06-10/House 13.html (deflated 68%)
+  adding: 2019-06-10/House 52.html (deflated 68%)
+  adding: 2019-06-10/House 53.html (deflated 68%)
+  adding: 2019-06-10/House 54.html (deflated 68%)
+  adding: 2019-06-10/House 8.html (deflated 68%)
+  adding: 2019-06-10/House 28.html (deflated 68%)
+  adding: 2019-06-10/House 10.html (deflated 68%)
+  adding: 2019-06-10/House 56.html (deflated 68%)
+Auto-refreshing stale OAuth token.
+Id: 16b3fe26cd13bbb0
+To: 
+From: 
+Date: 
+Subject: 
+ 
+[1] TRUE
+
+Attaching package: ‘gmailr’
+
+The following object is masked from ‘package:utils’:
+
+    history
+
+The following objects are masked from ‘package:base’:
+
+    body, date, labels, message
+
+
+Attaching package: ‘rmarkdown’
+
+The following object is masked from ‘package:gmailr’:
+
+    draft
+
+
+Attaching package: ‘dplyr’
+
+The following object is masked from ‘package:gmailr’:
+
+    id
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:gmailr’:
+
+    date
+
+The following object is masked from ‘package:base’:
+
+    date
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:reshape2’:
+
+    smiths
+
+
+Attaching package: ‘chron’
+
+The following objects are masked from ‘package:lubridate’:
+
+    days, hours, minutes, seconds, years
+
+
+Attaching package: ‘rowr’
+
+The following objects are masked from ‘package:dplyr’:
+
+    coalesce, count
+
+NULL
+NULL
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc105344b8812f.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpidcOpg/rmarkdown-str1053668e0f41.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-17/House 8.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc105336c80b63.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpidcOpg/rmarkdown-str1053613c3b2a.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-17/House 10.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc10532e53b019.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpidcOpg/rmarkdown-str1053246db8eb.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-17/House 13.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc10531816f73.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpidcOpg/rmarkdown-str105339709490.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-17/House 28.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc1053714b84d2.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpidcOpg/rmarkdown-str105352e00ef5.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-17/House 51.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc10534f43cccf.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpidcOpg/rmarkdown-str10537c9783d4.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-17/House 52.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc10531e122d6d.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpidcOpg/rmarkdown-str10534a025eb.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-17/House 53.html
+[1] "House 53 's report wasn't generated"
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc10533ef52146.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpidcOpg/rmarkdown-str10534d888170.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-17/House 54.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc10535f9b134b.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpidcOpg/rmarkdown-str1053661b43e5.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-17/House 56.html
+There were 50 or more warnings (use warnings() to see the first 50)
+  adding: 2019-06-17/ (stored 0%)
+  adding: 2019-06-17/House 51.html (deflated 68%)
+  adding: 2019-06-17/House 13.html (deflated 68%)
+  adding: 2019-06-17/House 52.html (deflated 68%)
+  adding: 2019-06-17/House 53.html (deflated 68%)
+  adding: 2019-06-17/House 54.html (deflated 69%)
+  adding: 2019-06-17/House 8.html (deflated 68%)
+  adding: 2019-06-17/House 28.html (deflated 68%)
+  adding: 2019-06-17/House 10.html (deflated 68%)
+  adding: 2019-06-17/House 56.html (deflated 68%)
+Auto-refreshing stale OAuth token.
+Id: 16b63f03a8ba9462
+To: 
+From: 
+Date: 
+Subject: 
+ 
+[1] TRUE
+
+Attaching package: ‘gmailr’
+
+The following object is masked from ‘package:utils’:
+
+    history
+
+The following objects are masked from ‘package:base’:
+
+    body, date, labels, message
+
+
+Attaching package: ‘rmarkdown’
+
+The following object is masked from ‘package:gmailr’:
+
+    draft
+
+
+Attaching package: ‘dplyr’
+
+The following object is masked from ‘package:gmailr’:
+
+    id
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:gmailr’:
+
+    date
+
+The following object is masked from ‘package:base’:
+
+    date
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:reshape2’:
+
+    smiths
+
+
+Attaching package: ‘chron’
+
+The following objects are masked from ‘package:lubridate’:
+
+    days, hours, minutes, seconds, years
+
+
+Attaching package: ‘rowr’
+
+The following objects are masked from ‘package:dplyr’:
+
+    coalesce, count
+
+NULL
+NULL
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc62595b6445ea.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp25B0yC/rmarkdown-str62597cbad2d9.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-24/House 8.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc62591db4750.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp25B0yC/rmarkdown-str62597b748467.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-24/House 10.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc625930b6d750.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp25B0yC/rmarkdown-str625959bb756f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-24/House 13.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc6259551b1323.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp25B0yC/rmarkdown-str6259182c39c0.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-24/House 28.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc62594c4e7ab7.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp25B0yC/rmarkdown-str62596a3c6c42.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-24/House 51.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+Quitting from lines 597-1201 (generateReport.Rmd) 
+
+[1] "House 52 's report wasn't generated"
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc6259561a14c1.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp25B0yC/rmarkdown-str62591c139015.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-24/House 53.html
+[1] "House 53 's report wasn't generated"
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc62595103417f.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp25B0yC/rmarkdown-str625938dfa18f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-24/House 54.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc62592152b1d0.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/Rtmp25B0yC/rmarkdown-str62595bac6477.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-24/House 56.html
+There were 50 or more warnings (use warnings() to see the first 50)
+  adding: 2019-06-24/ (stored 0%)
+  adding: 2019-06-24/House 51.html (deflated 68%)
+  adding: 2019-06-24/House 13.html (deflated 68%)
+  adding: 2019-06-24/House 53.html (deflated 68%)
+  adding: 2019-06-24/House 54.html (deflated 68%)
+  adding: 2019-06-24/House 8.html (deflated 68%)
+  adding: 2019-06-24/House 28.html (deflated 68%)
+  adding: 2019-06-24/House 10.html (deflated 68%)
+  adding: 2019-06-24/House 56.html (deflated 68%)
+Auto-refreshing stale OAuth token.
+Id: 16b87fcc1f6ddc6f
+To: 
+From: 
+Date: 
+Subject: 
+ 
+[1] TRUE
+
+Attaching package: ‘gmailr’
+
+The following object is masked from ‘package:utils’:
+
+    history
+
+The following objects are masked from ‘package:base’:
+
+    body, date, labels, message
+
+
+Attaching package: ‘rmarkdown’
+
+The following object is masked from ‘package:gmailr’:
+
+    draft
+
+
+Attaching package: ‘dplyr’
+
+The following object is masked from ‘package:gmailr’:
+
+    id
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:gmailr’:
+
+    date
+
+The following object is masked from ‘package:base’:
+
+    date
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:reshape2’:
+
+    smiths
+
+
+Attaching package: ‘chron’
+
+The following objects are masked from ‘package:lubridate’:
+
+    days, hours, minutes, seconds, years
+
+
+Attaching package: ‘rowr’
+
+The following objects are masked from ‘package:dplyr’:
+
+    coalesce, count
+
+NULL
+NULL
+Warning message:
+In dir.create(paste0("/home/nmahser/Wilson_Summary_Reports/reports/",  :
+  '/home/nmahser/Wilson_Summary_Reports/reports/2019-06-25' already exists
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4acb2a4d279a.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpMOkipP/rmarkdown-str4acb5a80e19f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 8.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4acb5f30788a.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpMOkipP/rmarkdown-str4acb539c2b8b.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 10.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4acb7aaed06d.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpMOkipP/rmarkdown-str4acb7446434c.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 13.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4acb3f936180.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpMOkipP/rmarkdown-str4acb112099.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 28.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4acb4fc85f0.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpMOkipP/rmarkdown-str4acb6d0c5319.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 51.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4acb2dfb2d48.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpMOkipP/rmarkdown-str4acb5edd22ff.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 52.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4acb67183f08.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpMOkipP/rmarkdown-str4acb76f39758.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 53.html
+[1] "House 53 's report wasn't generated"
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4acb215dd37f.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpMOkipP/rmarkdown-str4acb1d4fefc1.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 54.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4acb4f161a8b.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpMOkipP/rmarkdown-str4acb47003584.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 56.html
+There were 50 or more warnings (use warnings() to see the first 50)
+  adding: 2019-06-25/ (stored 0%)
+  adding: 2019-06-25/House 51.html (deflated 68%)
+  adding: 2019-06-25/House 13.html (deflated 68%)
+  adding: 2019-06-25/House 52.html (deflated 68%)
+  adding: 2019-06-25/House 53.html (deflated 68%)
+  adding: 2019-06-25/House 54.html (deflated 68%)
+  adding: 2019-06-25/House 8.html (deflated 68%)
+  adding: 2019-06-25/House 28.html (deflated 68%)
+  adding: 2019-06-25/House 10.html (deflated 68%)
+  adding: 2019-06-25/House 56.html (deflated 68%)
+Auto-refreshing stale OAuth token.
+Id: 16b8fbd96916a531
+To: 
+From: 
+Date: 
+Subject: 
+ 
+[1] TRUE
+
+Attaching package: ‘gmailr’
+
+The following object is masked from ‘package:utils’:
+
+    history
+
+The following objects are masked from ‘package:base’:
+
+    body, date, labels, message
+
+
+Attaching package: ‘rmarkdown’
+
+The following object is masked from ‘package:gmailr’:
+
+    draft
+
+
+Attaching package: ‘dplyr’
+
+The following object is masked from ‘package:gmailr’:
+
+    id
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:gmailr’:
+
+    date
+
+The following object is masked from ‘package:base’:
+
+    date
+
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:reshape2’:
+
+    smiths
+
+
+Attaching package: ‘chron’
+
+The following objects are masked from ‘package:lubridate’:
+
+    days, hours, minutes, seconds, years
+
+
+Attaching package: ‘rowr’
+
+The following objects are masked from ‘package:dplyr’:
+
+    coalesce, count
+
+NULL
+NULL
+Warning message:
+In dir.create(paste0("/home/nmahser/Wilson_Summary_Reports/reports/",  :
+  '/home/nmahser/Wilson_Summary_Reports/reports/2019-06-25' already exists
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4b4427061052.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpZ91Hgy/rmarkdown-str4b444bdbe81e.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 8.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4b447d297f62.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpZ91Hgy/rmarkdown-str4b445cbced0.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 10.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4b445876aa9e.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpZ91Hgy/rmarkdown-str4b44357214dd.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 13.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4b441f8e0188.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpZ91Hgy/rmarkdown-str4b44594848d0.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 28.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4b44455bb559.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpZ91Hgy/rmarkdown-str4b445f18b32a.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 51.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4b447eae1924.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpZ91Hgy/rmarkdown-str4b444a158542.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 52.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4b443d07b894.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpZ91Hgy/rmarkdown-str4b44d9e633.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 53.html
+[1] "House 53 's report wasn't generated"
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4b4441737e29.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpZ91Hgy/rmarkdown-str4b44e469be.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 54.html
+
+
+processing file: generateReport.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: extractFunctions (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Selecting by sleepDist
+  |                                                                         |................................                                 |  50%
+   inline R code fragments
+
+  |                                                                         |...........................................                      |  67%
+label: WEEKLY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: DAILY TABLE (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+Aggregation function missing: defaulting to length
+Using duration as value column: use value.var to override.
+Using time as value column: use value.var to override.
+Using sleepDist as value column: use value.var to override.
+Using duration as value column: use value.var to override.
+Using timeSpentOutside as value column: use value.var to override.
+
+output file: generateReport.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS generateReport.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output pandoc4b447366f205.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /home/nmahser/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css style.css --variable 'theme:bootstrap' --include-in-header /tmp/RtmpZ91Hgy/rmarkdown-str4b4462b4e234.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' 
+
+Output created: Wilson_Summary_Reports/reports/2019-06-25/House 56.html
+There were 50 or more warnings (use warnings() to see the first 50)
+  adding: 2019-06-25/ (stored 0%)
+  adding: 2019-06-25/House 51.html (deflated 68%)
+  adding: 2019-06-25/House 13.html (deflated 68%)
+  adding: 2019-06-25/House 52.html (deflated 68%)
+  adding: 2019-06-25/House 53.html (deflated 68%)
+  adding: 2019-06-25/House 54.html (deflated 68%)
+  adding: 2019-06-25/House 8.html (deflated 68%)
+  adding: 2019-06-25/House 28.html (deflated 68%)
+  adding: 2019-06-25/House 10.html (deflated 68%)
+  adding: 2019-06-25/House 56.html (deflated 68%)
+Id: 16b8fc5c8cd9233c
+To: 
+From: 
+Date: 
+Subject: 
+ 
+[1] TRUE

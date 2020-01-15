@@ -1,0 +1,1200 @@
+---
+title: "HomeSense Summary Report"
+output:
+  html_document:
+    css: style.css
+--- 
+
+```{r extractFunctions, echo=FALSE,message=FALSE,warning=FALSE}
+
+source("/home/nmahser/Wilson_Summary_Reports/pullLowLevelData.R")
+source("/home/nmahser/Wilson_Summary_Reports/functions.R")
+source("/home/nmahser/Wilson_Summary_Reports/pullHighLevelData.R")
+
+```
+## House `r location_id` | Report was generated on `r Sys.Date()` at `r format(Sys.time(), "%I:%M %p")`{.tabset .tabset-fade}
+
+###Weekly Table
+
+```{r WEEKLY TABLE, echo=FALSE,message=FALSE,warning=FALSE}
+#sensorData comes from pullLowLevelData.R
+
+#Clean raw data
+cleanedData <- cleanSensorData(sensorData)
+#Weekly low level sensor inputs
+
+#FilterCount Weekly
+filteredCountWeekly <- filterCountWeekly(cleanedData)
+
+#Filter Time Weekly
+filteredTimeWeekly <- filterTimeWeekly(cleanedData)
+
+## Calc overall weekly avg
+#Count
+weeklyCountAvg <- overallWeeklyCountAvg(cleanedData)
+#Time
+weeklyTimeAvg <- overallWeeklyTimeAvg(cleanedData)
+
+##Add filtered with Avg
+#Count weekly
+weeklyCount <- add_column(filteredCountWeekly,`Historical Average` = weeklyCountAvg$`Historical Average`, .after = "alias")
+
+weeklyCount <- column_to_rownames(weeklyCount, var = "alias")
+
+#Time weekly
+weeklyTime <- add_column(filteredTimeWeekly, `Historical Average` = weeklyTimeAvg$`Historical Average`, .after = "alias")
+weeklyTime <- column_to_rownames(weeklyTime, var = "alias")
+
+#Combine weekly count and time. This table will be used for math operation. Two tables are needed for math ope(logic) and Display. Read below
+weeklyTable <- combineTables(weeklyTime, weeklyCount)
+
+weeklyCountDisplay <- weeklyCount
+weeklyTimeDisplay <- weeklyTime
+
+###Now change format of each cell
+#sec to hr min
+for(i in 1:ncol(weeklyTimeDisplay)) {
+  weeklyTimeDisplay[,i] <- secToHr(weeklyTimeDisplay[,i])
+}
+
+#Combine Display tables
+weeklyTableDisplay <- combineTables(weeklyTimeDisplay,weeklyCountDisplay)
+
+#Delete possible NA values which might be caused by different alias a house do not have
+weeklyTableDisplay <- na.omit(weeklyTableDisplay)
+
+#Remove 0hr
+for(i in 1:nrow(weeklyTableDisplay)) {
+  
+  for(j in 1:ncol(weeklyTableDisplay)) {
+    
+   if(str_detect(weeklyTableDisplay[i,j],"^0hr")) {
+   weeklyTableDisplay[i,j] = sub('0hr ', "", weeklyTableDisplay[i,j])
+   
+   }
+  }
+}
+
+
+#Combine weekly count and time for math operations
+weeklyTableLogic <- combineTables(weeklyTime, weeklyCount)
+
+#Delete possible NA values which might be caused by different alias a house do not have
+weeklyTableLogic <- na.omit(weeklyTableLogic)
+
+#generate threshold values. ###If there is any alias wasn't included the thresholds will be 1.5 and 0.5
+thresAboveWeekly <- c()
+thresBelowWeekly <- c()
+
+
+#Threshold values for each alias
+timeInShower <- config.location[[houseID]]$params$timeInShower
+fridgeOpening <- config.location[[houseID]]$params$fridgeOpening
+timeUsingTv <- config.location[[houseID]]$params$timeUsingTv
+timeUsingTvInBedroom <- config.location[[houseID]]$params$timeUsingTvInBedroom
+timeInMasterBedroom <- config.location[[houseID]]$params$timeInMasterBedroom
+timeInGuestBedroom <- config.location[[houseID]]$params$timeInGuestBedroom
+toiletFlushMaster <- config.location[[houseID]]$params$toiletFlushMaster
+toiletFlushGuest <- config.location[[houseID]]$params$toiletFlushGuest
+coffeePotUsage <- config.location[[houseID]]$params$coffeePotUsage
+timeInKitchen <- config.location[[houseID]]$params$timeInKitchen
+pantryOpenning <- config.location[[houseID]]$params$pantryOpenning
+microwaveUsage <- config.location[[houseID]]$params$microwaveUsage
+toasterUsage <- config.location[[houseID]]$params$toasterUsage
+timeInLivingRoom <- config.location[[houseID]]$params$timeInLivingRoom
+timeInOffice <- config.location[[houseID]]$params$timeInOffice
+timeUsingWashingMachine <- config.location[[houseID]]$params$timeUsingWashingMachine
+wakeupTime <- config.location[[houseID]]$params$wakeupTime
+bedTime <- config.location[[houseID]]$params$bedTime
+outHomeThresh <- config.location[[houseID]]$params$outHomeThresh
+timeInBedThresh <- config.location[[houseID]]$params$timeInBedThresh
+sleepDistThreshold <- config.location[[houseID]]$params$sleepDistThreshold
+others <- config.location[[houseID]]$params$others
+
+
+
+
+#thresholds values
+
+
+for(i in 1:nrow(weeklyTableLogic)) {
+  
+  if(row.names(weeklyTableLogic)[i] == "Time Spent In Shower") { 
+
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + timeInShower)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - timeInShower)
+  
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Fridge Opening(s)") {
+    
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + fridgeOpening)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - fridgeOpening)
+    
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Time Spent Using TV") {
+    
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + timeUsingTv)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - timeUsingTv)
+    
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Time Spent Using TV In Bedroom") {
+    
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + timeUsingTvInBedroom)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - timeUsingTvInBedroom)
+    
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Time Spent In Master Bathroom") {
+    
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + timeInMasterBedroom)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - timeInMasterBedroom)
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Time Spent In Guest Bathroom") {
+    
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + timeInGuestBedroom)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - timeInGuestBedroom)
+  
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Toilet Flush(es), Master") {
+    
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + toiletFlushMaster)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - toiletFlushMaster)
+  
+   }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Toilet Flush(es), Guest") {
+    
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + toiletFlushGuest)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - toiletFlushGuest)
+  
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Coffee Pot Usage(s)") {
+    
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + coffeePotUsage)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - coffeePotUsage)
+  
+  }
+  
+  
+  else if(row.names(weeklyTableLogic)[i] == "Time Spent In Kitchen") {
+    
+    thresAboveWeekly[i] =  weeklyTableLogic$`Historical Average`[i] * (1 + timeInKitchen)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] *  (1 - timeInKitchen)
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Pantry Opening(s)") {
+    
+    thresAboveWeekly[i] =  weeklyTableLogic$`Historical Average`[i] * (1 + pantryOpenning)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] *  (1 - pantryOpenning)
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Microwave Usage(s)") {
+    
+    thresAboveWeekly[i] =  weeklyTableLogic$`Historical Average`[i] * (1 + microwaveUsage)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] *  (1 - microwaveUsage)
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Toaster Usage(s)") {
+    
+    thresAboveWeekly[i] =  weeklyTableLogic$`Historical Average`[i] * (1 + toasterUsage)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] *  (1 - toasterUsage)
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Time Spent In Living Room") {
+    
+    thresAboveWeekly[i] =  weeklyTableLogic$`Historical Average`[i] * (1 + timeInLivingRoom)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] *  (1 - timeInLivingRoom)
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Time Spent In Office") {
+    
+    thresAboveWeekly[i] =  weeklyTableLogic$`Historical Average`[i] * (1 + timeInOffice)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] *  (1 - timeInOffice)
+  }
+  
+  else if(row.names(weeklyTableLogic)[i] == "Time Using Washing Machine") {
+    
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + timeUsingWashingMachine)
+    thresBelowWeekly[i] = 0
+    
+  }
+  
+  else{
+    thresAboveWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 + others)
+    thresBelowWeekly[i] = weeklyTableLogic$`Historical Average`[i] * (1 - others)
+  }
+  
+}
+
+
+#bind threshold Weekly
+weeklyTableLogic <- cbind(weeklyTableLogic,thresAboveWeekly,thresBelowWeekly)
+
+flog.debug("Creating weeklyTable for count & time (lowlevel) data, LOCATION: %s",location_id)
+## Create the table / 
+weeklyTable <- weeklyTableDisplay %>%
+  mutate(
+  alias = row.names(.),
+   !!colnames(weeklyTableDisplay)[2] := cell_spec(.[[2]],color = ifelse(weeklyTableLogic[,2] > weeklyTableLogic$thresAboveWeekly,styleAbove, 
+ifelse(weeklyTableLogic[,2] < weeklyTableLogic$thresBelowWeekly,styleBelow,"black"))),
+  
+   !!colnames(weeklyTableDisplay)[3] := cell_spec(.[[3]],color = ifelse(weeklyTableLogic[,3] > weeklyTableLogic$thresAboveWeekly,styleAbove, 
+ifelse(weeklyTableLogic[,3] < weeklyTableLogic$thresBelowWeekly,styleBelow,"black"))),
+  
+   !!colnames(weeklyTableDisplay)[4] := cell_spec(.[[4]],color = ifelse(weeklyTableLogic[,4] > weeklyTableLogic$thresAboveWeekly,styleAbove, 
+ifelse(weeklyTableLogic[,4] < weeklyTableLogic$thresBelowWeekly,styleBelow,"black"))),
+
+  !!colnames(weeklyTableDisplay)[5] := cell_spec(.[[5]],color = ifelse(weeklyTableLogic[,5] > weeklyTableLogic$thresAboveWeekly,styleAbove, 
+ifelse(weeklyTableLogic[,5] < weeklyTableLogic$thresBelowWeekly,styleBelow,"black"))))
+
+weeklyTable <- column_to_rownames(weeklyTable, var = "alias")
+
+if(is.null(weeklyTable)) {
+  flog.error("weeklyTable for count&time wasn't created, LOCATION: %s",location_id)
+}
+
+###Sleep Weekly
+#Sleep data comes from pullHighLevelData file
+
+flog.debug("Organizing sleepData,LOCATION: %s",location_id)
+sleepData <- sleepOrganizer(sleepAndOut)
+
+#Filter/cast the sleepData
+castedSleepWeekly <- filterSleepWeekly(sleepData)
+
+#create a df for overall weekly average
+sleepAvgWeekly <- sleepWeeklyAvg(sleepData)
+
+#Combine casted df and wakeupAvg. 
+logicSleepWeekly <-cbind(sleepAvgWeekly,castedSleepWeekly)
+
+#Delete alias col
+logicSleepWeekly$alias = NULL
+
+#for display purpose
+
+displaySleepWeekly <- logicSleepWeekly
+
+#convert times to am and pm
+
+for(i in 1:ncol(displaySleepWeekly)){
+  
+  displaySleepWeekly[,i] <- format(strptime(displaySleepWeekly[,i],"%H:%M:%S"),format = "%I:%M %p")
+  
+}
+
+#convert times to numeric
+for(i in 1:ncol(logicSleepWeekly)){
+  
+ logicSleepWeekly[,i] <- period_to_seconds(hms(as.character(logicSleepWeekly[,i])))
+  
+}
+
+#If bed time past midnight add 24 hours
+for(i in 1:ncol(logicSleepWeekly)) {
+  
+  tryCatch(if(logicSleepWeekly[1,i] < 18000) { #18000 is 5 AM
+    
+    logicSleepWeekly[1,i] <- logicSleepWeekly[1,i] + 86400   #24 hours
+    
+  },error = function(e){'no sleep data for some week(s)'})
+}
+
+
+
+#Determine threshold
+aboveThresholdWeekly <- c()
+belowThresholdWeekly <- c()
+
+
+for(i in 1:nrow(logicSleepWeekly)) {
+
+    aboveThresholdWeekly[i] = logicSleepWeekly$`Historical Average`[i] + bedTime #3 hours
+    belowThresholdWeekly[i] = logicSleepWeekly$`Historical Average`[i] - wakeupTime #3 hours
+  
+}
+
+flog.debug("Combining logicSleepWeekly and threshold values, LOCATION: %s",location_id)
+logicSleepWeekly <- cbind(logicSleepWeekly,aboveThresholdWeekly,belowThresholdWeekly)
+
+##########
+
+flog.debug("Creating sleepWeeklyTable")
+##Create sleep weekly table
+sleepWeeklyTable <- displaySleepWeekly %>%
+ mutate(
+    alias = row.names(.),
+    !!colnames(displaySleepWeekly)[2] := cell_spec(.[[2]],color = ifelse(is.na(logicSleepWeekly[,2]),"black",ifelse(logicSleepWeekly[,2] > logicSleepWeekly$aboveThresholdWeekly,styleAbove, ifelse(logicSleepWeekly[,2] < logicSleepWeekly$belowThresholdWeekly,styleBelow,"black")))),
+    
+    !!colnames(displaySleepWeekly)[3] := cell_spec(.[[3]],color = ifelse(is.na(logicSleepWeekly[,3]),"black",ifelse(logicSleepWeekly[,3] > logicSleepWeekly$aboveThresholdWeekly,styleAbove, ifelse(logicSleepWeekly[,3] < logicSleepWeekly$belowThresholdWeekly,styleBelow,"black")))),
+    
+    !!colnames(displaySleepWeekly)[4] := cell_spec(.[[4]],color = ifelse(is.na(logicSleepWeekly[,4]),"black",ifelse(logicSleepWeekly[,4] > logicSleepWeekly$aboveThresholdWeekly,styleAbove, ifelse(logicSleepWeekly[,4] < logicSleepWeekly$belowThresholdWeekly,styleBelow,"black")))),
+    
+    !!colnames(displaySleepWeekly)[5] := cell_spec(.[[5]],color = ifelse(is.na(logicSleepWeekly[,5]),"black",ifelse(logicSleepWeekly[,5] > logicSleepWeekly$aboveThresholdWeekly,styleAbove, ifelse(logicSleepWeekly[,5] < logicSleepWeekly$belowThresholdWeekly,styleBelow,"black")))))
+
+sleepWeeklyTable <- column_to_rownames(sleepWeeklyTable, var = "alias") 
+
+if(is.null(sleepWeeklyTable)) {
+  flog.error("sleepWeekly table wasn't generated, LOCATION: %s",location_id)
+}
+
+flog.debug("Creating sleepDistWeekly...")
+###SleepDist Weekly
+
+sleepDistWeekly <- sleepDistruptionWeekly(sleepData)
+
+sleepDistWeekly <- column_to_rownames(sleepDistWeekly, var = "alias")
+
+sleepDistWeeklyAvg <- sleepDistWeeklyAvgFun(sleepData)
+
+sleepDistWeekly <- cbind.data.frame("Historical Average" = sleepDistWeeklyAvg, sleepDistWeekly)
+
+
+#Determine threshold
+aboveThresholdSleepDist <- c()
+belowThresholdSleepDist <- c()
+
+
+for(i in 1:nrow(sleepDistWeekly)) {
+
+  aboveThresholdSleepDist[i] = sleepDistWeekly$`Historical Average`[i] * (1 + sleepDistThreshold ) #%50
+  
+  belowThresholdSleepDist[i] = sleepDistWeekly$`Historical Average`[i] * (1 - sleepDistThreshold ) #%50
+  
+}
+
+flog.debug("Creating sleepDistWeekly Table")
+
+sleepDistWeeklyTable <- sleepDistWeekly %>%
+  mutate(
+    alias = row.names(.),
+    !!colnames(sleepDistWeekly)[2] := tryCatch(cell_spec(.[[2]],color = ifelse(is.na(sleepDistWeekly[,2]),"black",ifelse(sleepDistWeekly[,2] > aboveThresholdSleepDist,styleAbove,ifelse(sleepDistWeekly[,2] < belowThresholdSleepDist,styleBelow,"black")))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(sleepDistWeekly)[3] := tryCatch(cell_spec(.[[3]],color = ifelse(is.na(sleepDistWeekly[,3]),"black",ifelse(sleepDistWeekly[,3] > aboveThresholdSleepDist,styleAbove,ifelse(sleepDistWeekly[,3] < belowThresholdSleepDist,styleBelow,"black")))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(sleepDistWeekly)[4] := tryCatch(cell_spec(.[[4]],color = ifelse(is.na(sleepDistWeekly[,4]),"black",ifelse(sleepDistWeekly[,4] > aboveThresholdSleepDist,styleAbove,ifelse(sleepDistWeekly[,4] < belowThresholdSleepDist,styleBelow,"black")))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(sleepDistWeekly)[5] := tryCatch(cell_spec(.[[5]],color = ifelse(is.na(sleepDistWeekly[,5]),"black",ifelse(sleepDistWeekly[,5] > aboveThresholdSleepDist,styleAbove,ifelse(sleepDistWeekly[,5] < belowThresholdSleepDist,styleBelow,"black")))),error = function(e){ '<span style="color: black">NA</span>'}))
+
+sleepDistWeeklyTable <- column_to_rownames(sleepDistWeeklyTable, var = "alias")
+
+if(is.null(sleepDistWeeklyTable)) {
+  flog.error("sleepDistWeeklyTable wasn't generated, LOCATION: %s",location_id)
+}
+
+
+flog.debug("Creating timeInBedWeekly...,LOCATION: %s",location_id)
+#TIMEINBED WEEKLY
+timeInBedWeekly <- timeInBedWeeklyFun(sleepData)
+timeInBedWeekly <-  column_to_rownames(timeInBedWeekly, var = "alias")
+timeBedWeeklyAvg <- timeBedWeeklyAvgFun(sleepData)
+
+logicTimeInBedWeekly <- cbind.data.frame("Historical Average" = timeBedWeeklyAvg,timeInBedWeekly)
+
+#hr and sec format
+displayTimeInBedWeekly <- logicTimeInBedWeekly
+
+#Determine threshold
+aboveThresholdInBed <- c()
+belowThresholdInBed <- c()
+
+
+for(i in 1:nrow(logicTimeInBedWeekly)) {
+
+    aboveThresholdInBed[i] = logicTimeInBedWeekly$`Historical Average`[i] * (1 + timeInBedThresh) #%25
+    belowThresholdInBed[i] = logicTimeInBedWeekly$`Historical Average`[i] * (1 - timeInBedThresh) #%25
+  
+}
+
+logicTimeInBedWeekly <- cbind(logicTimeInBedWeekly,aboveThresholdInBed,belowThresholdInBed)
+
+#sec to hr min
+for(i in 1:ncol(displayTimeInBedWeekly)) {
+  displayTimeInBedWeekly[,i] <- secToHr(displayTimeInBedWeekly[,i])
+}
+
+
+#get ridd of 0hr
+for(i in 1:nrow(displayTimeInBedWeekly)) {
+  
+  for(j in 1:ncol(displayTimeInBedWeekly)) {
+    
+   if(str_detect(displayTimeInBedWeekly[i,j],"^0hr")) {
+   displayTimeInBedWeekly[i,j] = sub('0hr ', "", displayTimeInBedWeekly[i,j])
+   
+   }
+  }
+}
+
+#delete NAhr NAsc
+for(i in 1:nrow(displayTimeInBedWeekly)) {
+  
+  for(j in 1:ncol(displayTimeInBedWeekly)) {
+    
+   if(str_detect(displayTimeInBedWeekly[i,j],"^NA")) {
+   displayTimeInBedWeekly[i,j] = NA
+   
+   }
+  }
+}
+
+
+flog.debug("Creating timeInBedWeeklyTable..., LOCATION: %s",location_id)
+timeInBedWeeklyTable <- displayTimeInBedWeekly %>%
+  mutate(
+    alias = row.names(.),
+    !!colnames(displayTimeInBedWeekly)[2] := cell_spec(.[[2]],color = ifelse(is.na(logicTimeInBedWeekly[,2]),"black",ifelse(logicTimeInBedWeekly[,2] > logicTimeInBedWeekly$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBedWeekly[,2] < logicTimeInBedWeekly$belowThresholdInBed,styleBelow,"black")))),
+    
+    !!colnames(displayTimeInBedWeekly)[3] := cell_spec(.[[3]],color = ifelse(is.na(logicTimeInBedWeekly[,3]),"black",ifelse(logicTimeInBedWeekly[,3] > logicTimeInBedWeekly$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBedWeekly[,3] < logicTimeInBedWeekly$belowThresholdInBed,styleBelow,"black")))),
+    
+    !!colnames(displayTimeInBedWeekly)[4] := cell_spec(.[[4]],color = ifelse(is.na(logicTimeInBedWeekly[,4]),"black",ifelse(logicTimeInBedWeekly[,4] > logicTimeInBedWeekly$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBedWeekly[,4] < logicTimeInBedWeekly$belowThresholdInBed,styleBelow,"black")))),
+    
+    !!colnames(displayTimeInBedWeekly)[5] := cell_spec(.[[5]],color = ifelse(is.na(logicTimeInBedWeekly[,5]),"black",ifelse(logicTimeInBedWeekly[,5] > logicTimeInBedWeekly$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBedWeekly[,5] < logicTimeInBedWeekly$belowThresholdInBed,styleBelow,"black")))))
+
+timeInBedWeeklyTable <- column_to_rownames(timeInBedWeeklyTable, var = "alias")
+
+
+if(is.null(timeInBedWeeklyTable)) {
+  flog.error("timeInBedWeeklyTable wasn't generated, LOCATION: %s",location_id)
+}
+
+
+flog.debug("Creating outHomeWeekly...")
+###Outhome Weekly
+outHomeWeekly <- filterOutHomeWeekly(sleepAndOut)
+
+outHomeWeekly <- column_to_rownames(outHomeWeekly, var = "alias")
+
+outHomeWeeklyAvg <- outHomeWeeklyAvgFun(sleepAndOut)
+
+#Outhome logic Table
+logicOutHomeWeekly <- cbind.data.frame("Historical Average"=outHomeWeeklyAvg,outHomeWeekly)
+
+displayOutHomeWeekly <- logicOutHomeWeekly
+
+#Determine threshold
+aboveThresholdOut <- c()
+belowThresholdOut <- c()
+
+
+for(i in 1:nrow(logicOutHomeWeekly)) {
+
+    aboveThresholdOut[i] = logicOutHomeWeekly$`Historical Average`[i] * (1 + outHomeThresh) #%25
+    belowThresholdOut[i] = logicOutHomeWeekly$`Historical Average`[i] * (1 - outHomeThresh) #%25
+  
+}
+
+logicOutHomeWeekly <- cbind(logicOutHomeWeekly,aboveThresholdOut,belowThresholdOut)
+
+#sec to hr min
+for(i in 1:ncol(displayOutHomeWeekly)) {
+  displayOutHomeWeekly[,i] <- secToHr(displayOutHomeWeekly[,i])
+}
+
+
+#get ridd of 0hr
+for(i in 1:nrow(displayOutHomeWeekly)) {
+  
+  for(j in 1:ncol(displayOutHomeWeekly)) {
+    
+   if(str_detect(displayOutHomeWeekly[i,j],"^0hr")) {
+   displayOutHomeWeekly[i,j] = sub('0hr ', "", displayOutHomeWeekly[i,j])
+   
+   }
+  }
+}
+
+#delete NAhr NAsc
+for(i in 1:nrow(displayOutHomeWeekly)) {
+  
+  for(j in 1:ncol(displayOutHomeWeekly)) {
+    
+   if(str_detect(displayOutHomeWeekly[i,j],"^NA")) {
+   displayOutHomeWeekly[i,j] = NA
+   }
+  }
+}
+
+flog.debug("Creating outWeeklyTable..., LOCATION: %s",location_id)
+
+outWeeklyTable <- displayOutHomeWeekly %>%
+  mutate(
+    alias = row.names(.),
+    !!colnames(displayOutHomeWeekly)[2] := tryCatch(cell_spec(.[[2]],color = ifelse(logicOutHomeWeekly[,2] > logicOutHomeWeekly$aboveThresholdOut,styleAbove, 
+                                                                          ifelse(logicOutHomeWeekly[,2] < logicOutHomeWeekly$belowThresholdOut,styleBelow,"black"))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(displayOutHomeWeekly)[3] := tryCatch(cell_spec(.[[3]],color = ifelse(logicOutHomeWeekly[,3] > logicOutHomeWeekly$aboveThresholdOut,styleAbove, 
+                                                                          ifelse(logicOutHomeWeekly[,3] < logicOutHomeWeekly$belowThresholdOut,styleBelow,"black"))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(displayOutHomeWeekly)[4] := tryCatch(cell_spec(.[[4]],color = ifelse(logicOutHomeWeekly[,4] > logicOutHomeWeekly$aboveThresholdOut,styleAbove, 
+                                                                          ifelse(logicOutHomeWeekly[,4] < logicOutHomeWeekly$belowThresholdOut,styleBelow,"black"))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(displayOutHomeWeekly)[5] := tryCatch(cell_spec(.[[5]],color = ifelse(logicOutHomeWeekly[,5] > logicOutHomeWeekly$aboveThresholdOut,styleAbove, 
+                                                                          ifelse(logicOutHomeWeekly[,5] < logicOutHomeWeekly$belowThresholdOut,styleBelow,"black"))),error = function(e){'<span style="color: black">NA</span>'}))
+
+
+outWeeklyTable <- column_to_rownames(outWeeklyTable, var = "alias") 
+
+if(is.null(outWeeklyTable)) {
+  flog.error("outWeeklyTable wasn't generated, LOCATION: %s",location_id)
+}
+
+flog.debug("Overall weekly table rbinding..., LOCATION: %s",location_id)
+completeWeekly <- rbind(weeklyTable,sleepWeeklyTable,timeInBedWeeklyTable,sleepDistWeeklyTable,outWeeklyTable)
+
+
+flog.debug("Create index value for auto-generating row headers (Hygiene,etc.)")
+#index
+index <- seq(nrow(completeWeekly))
+
+indexTable <- cbind.data.frame(index,completeWeekly)
+
+#These aliases must be in 28 days of data so add dummy rows which represents these aliases
+vec <- c("Time Using Washing Machine","Time Spent In Kitchen", "Time Spent In Guest Bathroom")
+
+#Add foot note mark
+
+markerWeekly <- which(rownames(completeWeekly) %in% c("Time Spent In Bed","Bed Time","Wake up Time","Sleep Distruption","Time Spent Outside"))
+
+markerWeekly2 <-  which(rownames(completeWeekly) %in% c("Time Spent Outside","Time Spent In Bed"))
+
+rownames(completeWeekly)[markerWeekly] <- paste0(row.names(completeWeekly)[markerWeekly],
+                                       '<span><font size="3">*</font></span>')
+
+rownames(completeWeekly)[markerWeekly2] <- paste0(row.names(completeWeekly)[markerWeekly2],
+                                       '<span><font size="3">†</font></span>')
+
+
+flog.debug("Creating Overall Weekly Table, LOCATION: %s",location_id)
+#kableExtra
+weeklyTable <- completeWeekly %>%
+  kable(escape = F,align = "c") %>%
+  kable_styling(bootstrap_options = c("hover","condensed","responsive"),font_size = 14) %>%
+  footnote(general = '<span style = "color:black; background-color: #BEE6FE;border-radius: 30px; padding: 3px;">Above Threshold</span>
+           <span style = "color:black; background-color: #FDDCDD;border-radius: 30px; padding: 3px;">Below Threshold</span>
+           <br>
+           <span style = color:black><font size="3">*</font> Values are calculated based on the normal status (living alone), having a companion in the house might affect these values</span>
+           <br>
+           <span style = color:black><font size="3">†</font> Total time for the entire week</span>'
+            
+           ,escape = F) %>%
+  group_rows(index = c("Hygiene"=match(vec,rownames(indexTable))[1],"Nutrition"=match(vec,rownames(indexTable))[2]-match(vec,rownames(indexTable))[1],"Bathroom Usage"=match(vec,rownames(indexTable))[3]-match(vec,rownames(indexTable))[2],"Daily Activities"=max(index)-match(vec,rownames(indexTable))[3]),
+label_row_css = "background-color: #3CC47C; color: #fff;") %>% #Try with different collors
+  column_spec(2, background = "#ECEBEB") %>%
+  row_spec(0,bold = T,color = "#EFEFEF",background = "#1E392A", font_size = 16)
+
+weeklyTable
+
+```
+### Daily Table
+```{r DAILY TABLE,echo=FALSE,message=FALSE,warning=FALSE}
+
+###Daily Low sensor input
+
+
+#Filter Count Daily
+filteredCountDaily <- filterCountDaily(cleanedData)
+
+#Filter Time Daily
+filteredTimeDaily <- filterTimeDaily(cleanedData)
+
+## Calc overall daily avg
+#Count
+dailyCountAvg <- overallDailyCountAvg(cleanedData,filteredCountDaily)
+
+#Time
+dailyTimeAvg <- overallDailyTimeAvg(cleanedData, filteredTimeDaily)
+
+##Add filtered with Avg
+#Count daily
+dailyCount <- add_column(filteredCountDaily,`Historical Average` = dailyCountAvg$Historical.Average, .after = "alias")
+dailyCount <- column_to_rownames(dailyCount, var = "alias")
+
+#Time daily
+dailyTime <- add_column(filteredTimeDaily, `Historical Average` = dailyTimeAvg$Historical.Average, .after = "alias")
+dailyTime <- column_to_rownames(dailyTime, var = "alias")
+
+#Combine daily count and time. This table will be used for math operation. Two tables are needed for math ope(logic) and Display. Read below
+dailyTable <- combineTables(dailyTime,dailyCount)
+
+###Create instance of count and time tables for displaying purpose. There are different data types in each col.
+###If we convert all of them to string, we can't do math operations on string data type.
+###We can't also keep numeric data types do coloring operation, then convert each cell to specific string type
+###Because after coloring operation each cell gets wrapped into a html tag, which prevent doing any string display type change (hr min, am, pm)
+###We can't also loop through rows because as soon as one data type change in 1 cell, all the cell types in the column change
+###However, we could keep numeric data types and create another col for the results of Math operation as -1:below, #0:within range, 1:above threshold. Then we could color the each cell based on -1,0 and 1...
+
+
+dailyCountDisplay <- dailyCount
+dailyTimeDisplay <- dailyTime
+
+###Now change format of each cell
+#sec to hr min
+for(i in 1:ncol(dailyTimeDisplay)) {
+  dailyTimeDisplay[,i] <- secToHr(dailyTimeDisplay[,i])
+}
+
+
+#Combine Display tables
+dailyTableDisplay <- combineTables(dailyTimeDisplay,dailyCountDisplay)
+
+#Delete possible NA values which might be caused by different alias a house do not have
+dailyTableDisplay <- na.omit(dailyTableDisplay)
+
+#Remove 0hr
+for(i in 1:nrow(dailyTableDisplay)) {
+  
+  for(j in 1:ncol(dailyTableDisplay)) {
+    
+   if(str_detect(dailyTableDisplay[i,j],"^0hr")) {
+   dailyTableDisplay[i,j] = sub('0hr ', "", dailyTableDisplay[i,j])
+   
+   }
+  }
+}
+
+
+
+#Combine daily count and time for math operations
+dailyTableLogic <- combineTables(dailyTime,dailyCount)
+
+#Delete possible NA values which might be caused by different alias a house do not have
+dailyTableLogic <- na.omit(dailyTableLogic)
+
+#Threshold Daily
+thresAboveDaily <- c()
+thresBelowDaily <- c()
+
+flog.debug("Determining threshold values for daily table, LOCATION: %s",location_id)
+
+for(i in 1:nrow(dailyTableLogic)) {
+  
+  if(row.names(dailyTableLogic)[i] == "Time Spent In Shower") { 
+
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + timeInShower)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - timeInShower)
+  
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Fridge Opening(s)") {
+    
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + fridgeOpening)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - fridgeOpening)
+    
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Time Spent Using TV") {
+    
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + timeUsingTv)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - timeUsingTv)
+    
+  }
+  
+   else if(row.names(dailyTableLogic)[i] == "Time Spent Using TV In Bedroom") {
+    
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + timeUsingTvInBedroom)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - timeUsingTvInBedroom)
+    
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Time Spent In Master Bathroom") {
+    
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + timeInMasterBedroom)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - timeInMasterBedroom)
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Time Spent In Guest Bathroom") {
+    
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + timeInGuestBedroom)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - timeInGuestBedroom)
+  
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Toilet Flush(es), Master") {
+    
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + toiletFlushMaster)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - toiletFlushMaster)
+  
+   }
+  
+  else if(row.names(dailyTableLogic)[i] == "Toilet Flush(es), Guest") {
+    
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + toiletFlushGuest)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - toiletFlushGuest) - 0.28
+  
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Coffee Pot Usage(s)") {
+    
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + coffeePotUsage)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - coffeePotUsage)
+  
+  }
+  
+  
+  else if(row.names(dailyTableLogic)[i] == "Time Spent In Kitchen") {
+    
+    thresAboveDaily[i] =  dailyTableLogic$`Historical Average`[i] * (1 + timeInKitchen)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] *  (1 - timeInKitchen)
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Pantry Opening(s)") {
+    
+    thresAboveDaily[i] =  dailyTableLogic$`Historical Average`[i] * (1 + pantryOpenning)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] *  (1 - pantryOpenning) - 0.28
+  }
+
+  
+  else if(row.names(dailyTableLogic)[i] == "Microwave Usage(s)") {
+    
+    thresAboveDaily[i] =  dailyTableLogic$`Historical Average`[i] * (1 + microwaveUsage)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] *  (1 - microwaveUsage) - 0.28
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Toaster Usage(s)") {
+    
+    thresAboveDaily[i] =  dailyTableLogic$`Historical Average`[i] * (1 + toasterUsage)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] *  (1 - toasterUsage) - 0.28
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Time Spent In Living Room") {
+    
+    thresAboveDaily[i] =  dailyTableLogic$`Historical Average`[i] * (1 + timeInLivingRoom)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] *  (1 - timeInLivingRoom)
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Time Spent In Office") {
+    
+    thresAboveDaily[i] =  dailyTableLogic$`Historical Average`[i] * (1 + timeInOffice)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] *  (1 - timeInOffice)
+  }
+  
+  else if(row.names(dailyTableLogic)[i] == "Time Using Washing Machine") {
+    
+    #thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + timeUsingWashingMachine)
+    thresAboveDaily[i] = 1000000000000000000
+    thresBelowDaily[i] = 0
+    
+  }
+  
+  else{
+    thresAboveDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 + others)
+    thresBelowDaily[i] = dailyTableLogic$`Historical Average`[i] * (1 - others)
+  }
+  
+}
+
+
+
+#bind thresholds daily
+dailyTableLogic <- cbind(dailyTableLogic,thresAboveDaily,thresBelowDaily)
+
+flog.debug("Creating daily table for count&time, LOCATION: %s",location_id)
+#Color cells based on the threshold value
+dailyTable <- dailyTableDisplay %>%
+  mutate(
+  alias = row.names(.),
+  !!colnames(dailyTableDisplay)[2] := cell_spec(.[[2]],color = ifelse(dailyTableLogic[,2] > dailyTableLogic$thresAboveDaily,styleAbove,
+                                                        ifelse(dailyTableLogic[,2] < dailyTableLogic$thresBelowDaily,styleBelow,"black"))),
+                              
+  !!colnames(dailyTableDisplay)[3] := cell_spec(.[[3]],color = ifelse(dailyTableLogic[,3] > dailyTableLogic$thresAboveDaily,styleAbove,
+                                                        ifelse(dailyTableLogic[,3] < dailyTableLogic$thresBelowDaily,styleBelow,"black"))),
+  
+  !!colnames(dailyTableDisplay)[4] := cell_spec(.[[4]],color = ifelse(dailyTableLogic[,4] > dailyTableLogic$thresAboveDaily,styleAbove,
+                                                        ifelse(dailyTableLogic[,4] < dailyTableLogic$thresBelowDaily,styleBelow,"black"))),
+  
+  !!colnames(dailyTableDisplay)[5] := cell_spec(.[[5]],color = ifelse(dailyTableLogic[,5] > dailyTableLogic$thresAboveDaily,styleAbove,
+                                                        ifelse(dailyTableLogic[,5] < dailyTableLogic$thresBelowDaily,styleBelow,"black"))),
+  
+  !!colnames(dailyTableDisplay)[6] := cell_spec(.[[6]],color = ifelse(dailyTableLogic[,6] > dailyTableLogic$thresAboveDaily,styleAbove,
+                                                        ifelse(dailyTableLogic[,6] < dailyTableLogic$thresBelowDaily,styleBelow,"black"))),
+  
+  !!colnames(dailyTableDisplay)[7] := cell_spec(.[[7]],color = ifelse(dailyTableLogic[,7] > dailyTableLogic$thresAboveDaily,styleAbove,
+                                                        ifelse(dailyTableLogic[,7] < dailyTableLogic$thresBelowDaily,styleBelow,"black"))),
+  
+  !!colnames(dailyTableDisplay)[8] := cell_spec(.[[8]],color = ifelse(dailyTableLogic[,8] > dailyTableLogic$thresAboveDaily,styleAbove,
+                                                        ifelse(dailyTableLogic[,8] < dailyTableLogic$thresBelowDaily,styleBelow,"black")))
+  )
+
+dailyTable = column_to_rownames(dailyTable, var = "alias")
+
+
+if(is.null(dailyTable)) {
+  flog.error("dailyTable wasn't generated, LOCATION: %s",location_id)
+}
+
+flog.debug("Organizing daily sleep data...,LOCATION: %s",location_id)
+#Filter/cast the sleepData
+castedSleepData <- filterSleepDaily(sleepData)
+
+#create a df for overall daily average
+sleepAvgDaily <- sleepDailyAvg(sleepData)
+
+# #Posixt to chron times
+for(i in 1:ncol(castedSleepData)) {
+  
+ castedSleepData[,i] <- times(strftime(castedSleepData[,i],"%H:%M:%S"))
+
+}
+
+logicSleepDaily <- cbind.data.frame(sleepAvgDaily,castedSleepData)
+
+displaySleepDaily <- logicSleepDaily
+
+#convert times to am and pm
+
+for(i in 1:ncol(displaySleepDaily)){
+  
+ displaySleepDaily[,i] <- format(strptime(displaySleepDaily[,i],"%H:%M:%S"),format = "%I:%M %p")
+  
+}
+
+
+#convert times to numeric
+for(i in 1:ncol(logicSleepDaily)){
+  
+ logicSleepDaily[,i] <- period_to_seconds(hms(as.character(logicSleepDaily[,i])))
+  
+}
+
+
+#If bed time past midnight add 24 hours
+for(i in 1:ncol(logicSleepDaily)) {
+  
+  tryCatch(if(logicSleepDaily[1,i] < 18000) { #18000 is 5 AM
+    
+    logicSleepDaily[1,i] <- logicSleepDaily[1,i] + 86400   #24 hours
+    
+  },error = invisible(function(e){'no sleep data for some days'}))
+}
+
+#Determine threshold
+aboveThreshold <- c()
+belowThreshold <- c()
+
+
+for(i in 1:nrow(logicSleepDaily)) {
+
+    aboveThreshold[i] = logicSleepDaily$`Historical Average`[i] + bedTime #3 hours
+    belowThreshold[i] = logicSleepDaily$`Historical Average`[i] - wakeupTime #3 hours
+  
+}
+
+
+logicSleepDaily <- cbind(logicSleepDaily,aboveThreshold,belowThreshold)
+
+flog.debug("Creating sleepDailyTable...,LOCATION: %s",location_id)
+#Do not use loop, you might need to define specific thresholds for specific behaviours
+sleepDailyTable <- displaySleepDaily %>%
+  mutate(
+    alias = row.names(.),
+    !!colnames(displaySleepDaily)[2] := cell_spec(.[[2]],color = ifelse(is.na(logicSleepDaily[,2]),"black",ifelse(logicSleepDaily[,2] > logicSleepDaily$aboveThreshold,styleAbove, ifelse(logicSleepDaily[,2] < logicSleepDaily$belowThreshold,styleBelow,"black")))),
+    
+    !!colnames(displaySleepDaily)[3] := cell_spec(.[[3]],color = ifelse(is.na(logicSleepDaily[,3]),"black",ifelse(logicSleepDaily[,3] > logicSleepDaily$aboveThreshold,styleAbove, ifelse(logicSleepDaily[,3] < logicSleepDaily$belowThreshold,styleBelow,"black")))),
+    
+    !!colnames(displaySleepDaily)[4] := cell_spec(.[[4]],color = ifelse(is.na(logicSleepDaily[,4]),"black",ifelse(logicSleepDaily[,4] > logicSleepDaily$aboveThreshold,styleAbove, ifelse(logicSleepDaily[,4] < logicSleepDaily$belowThreshold,styleBelow,"black")))),
+    
+    !!colnames(displaySleepDaily)[5] := cell_spec(.[[5]],color = ifelse(is.na(logicSleepDaily[,5]),"black",ifelse(logicSleepDaily[,5] > logicSleepDaily$aboveThreshold,styleAbove, ifelse(logicSleepDaily[,5] < logicSleepDaily$belowThreshold,styleBelow,"black")))),
+    
+    !!colnames(displaySleepDaily)[6] := cell_spec(.[[6]],color = ifelse(is.na(logicSleepDaily[,6]),"black",ifelse(logicSleepDaily[,6] > logicSleepDaily$aboveThreshold,styleAbove, ifelse(logicSleepDaily[,6] < logicSleepDaily$belowThreshold,styleBelow,"black")))),
+    
+    !!colnames(displaySleepDaily)[7] := cell_spec(.[[7]],color = ifelse(is.na(logicSleepDaily[,7]),"black", ifelse(logicSleepDaily[,7] > logicSleepDaily$aboveThreshold,styleAbove, ifelse(logicSleepDaily[,7] < logicSleepDaily$belowThreshold,styleBelow,"black")))),
+    
+    !!colnames(displaySleepDaily)[8] := cell_spec(.[[8]],color =  ifelse(is.na(logicSleepDaily[,8]),"black",ifelse(logicSleepDaily[,8] > logicSleepDaily$aboveThreshold,styleAbove, ifelse(logicSleepDaily[,8] < logicSleepDaily$belowThreshold,styleBelow,"black")))))
+
+sleepDailyTable <- column_to_rownames(sleepDailyTable, var = "alias") 
+
+
+if(is.null(sleepDailyTable)) {
+  flog.error("sleepDailyTable wasn't generated,LOCATION: %s",location_id)
+}
+
+
+flog.debug("Creating sleepDistDaily...")
+###SleepDist Daily
+sleepDistDaily <- sleepDistruptionDaily(sleepData)
+
+sleepDistDaily <- column_to_rownames(sleepDistDaily, var = "alias")
+
+sleepDistDailyAvg <- sleepDistDailyAvgFun(sleepData)
+
+sleepDistDaily <- cbind.data.frame("Historical Average" = sleepDistDailyAvg, sleepDistDaily)
+
+#Determine threshold
+aboveThresholdDistDaily <- c()
+belowThresholdDistDaily <- c()
+
+
+for(i in 1:nrow(sleepDistDaily)) {
+
+  aboveThresholdDistDaily[i] = sleepDistDaily$`Historical Average`[i] * (2.1 + sleepDistThreshold) #
+  
+  belowThresholdDistDaily[i] = sleepDistDaily$`Historical Average`[i] * (1 - sleepDistThreshold) - 0.28
+  
+}
+
+flog.debug("Creating distDailyTable,LOCATION: %s",location_id)
+
+distDailyTable <- sleepDistDaily %>%
+ mutate(
+    alias = row.names(.),
+    !!colnames(sleepDistDaily)[2] := tryCatch(cell_spec(.[[2]],color = ifelse(sleepDistDaily[,2] > aboveThresholdDistDaily, styleAbove, 
+                                                                        ifelse(sleepDistDaily[,2] < belowThresholdDistDaily, styleBelow,"black"))),error = function(e){  '<span style="color: black">NA</span>'}),
+    
+    !!colnames(sleepDistDaily)[3] := tryCatch(cell_spec(.[[3]],color = ifelse(sleepDistDaily[,3] > aboveThresholdDistDaily, styleAbove, 
+                                                                        ifelse(sleepDistDaily[,3] < belowThresholdDistDaily, styleBelow,"black"))),error = function(e){  '<span style="color: black">NA</span>'}),
+    
+    !!colnames(sleepDistDaily)[4] := tryCatch(cell_spec(.[[4]],color = ifelse(sleepDistDaily[,4] > aboveThresholdDistDaily, styleAbove, 
+                                                                        ifelse(sleepDistDaily[,4] < belowThresholdDistDaily, styleBelow,"black"))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(sleepDistDaily)[5] := tryCatch(cell_spec(.[[5]],color = ifelse(sleepDistDaily[,5] > aboveThresholdDistDaily, styleAbove, 
+                                                                        ifelse(sleepDistDaily[,5] < belowThresholdDistDaily, styleBelow,"black"))),error = function(e){  '<span style="color: black">NA</span>'}),
+    
+    !!colnames(sleepDistDaily)[6] := tryCatch(cell_spec(.[[6]],color = ifelse(sleepDistDaily[,6] > aboveThresholdDistDaily, styleAbove, 
+                                                                        ifelse(sleepDistDaily[,6] < belowThresholdDistDaily, styleBelow,"black"))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(sleepDistDaily)[7] := tryCatch(cell_spec(.[[7]],color = ifelse(sleepDistDaily[,7] > aboveThresholdDistDaily, styleAbove, 
+                                                                        ifelse(sleepDistDaily[,7] < belowThresholdDistDaily, styleBelow,"black"))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(sleepDistDaily)[8] := tryCatch(cell_spec(.[[8]],color = ifelse(sleepDistDaily[,8] > aboveThresholdDistDaily, styleAbove,
+
+ifelse(sleepDistDaily[,8] < belowThresholdDistDaily, styleBelow,"black"))),error = function(e){  '<span style="color: black">NA</span>'}))
+
+distDailyTable <- column_to_rownames(distDailyTable, var = "alias") 
+
+if(is.null(distDailyTable)) {
+  flog.error("distDailyTable wasn't generated,LOCATION: %s",location_id)
+}
+
+flog.debug("Creating timeInBed for daily...")
+###Time in Bed
+timeInBed <- timeInBedDaily(sleepData)
+
+
+timeInBed <- column_to_rownames(timeInBed, var = "alias")
+
+timeBedDailyAvg <- timeBedDailyAvg(sleepData)
+
+
+logicTimeInBed <- cbind.data.frame("Historical Average" = timeBedDailyAvg,timeInBed)
+#hr and sec format
+displayTimeInBedDaily <- logicTimeInBed
+
+#Determine threshold
+aboveThresholdInBed <- c()
+belowThresholdInBed <- c()
+
+
+for(i in 1:nrow(logicTimeInBed)) {
+
+  aboveThresholdInBed[i] = logicTimeInBed$`Historical Average`[i] * (1 + timeInBedThresh) #%25
+  
+  belowThresholdInBed[i] = logicTimeInBed$`Historical Average`[i] * (1 - timeInBedThresh) #%25
+  
+}
+
+logicTimeInBed <- cbind(logicTimeInBed,aboveThresholdInBed,belowThresholdInBed)
+
+
+#sec to hr min
+for(i in 1:ncol(displayTimeInBedDaily)) {
+  displayTimeInBedDaily[,i] <- secToHr(displayTimeInBedDaily[,i])
+}
+
+
+#get ridd of 0hr
+for(i in 1:nrow(displayTimeInBedDaily)) {
+  
+  for(j in 1:ncol(displayTimeInBedDaily)) {
+    
+   if(str_detect(displayTimeInBedDaily[i,j],"^0hr")) {
+   displayTimeInBedDaily[i,j] = sub('0hr ', "", displayTimeInBedDaily[i,j])
+   
+   }
+  }
+}
+
+
+#delete NAhr NAsc
+for(i in 1:nrow(displayTimeInBedDaily)) {
+  
+  for(j in 1:ncol(displayTimeInBedDaily)) {
+    
+   if(str_detect(displayTimeInBedDaily[i,j],"^NA")) {
+   displayTimeInBedDaily[i,j] = NA
+   
+   }
+  }
+}
+
+flog.debug("Creating timeInBedDailyTable,LOCATION: %s",location_id)
+
+timeInBedDailyTable <- displayTimeInBedDaily %>%
+  mutate(
+    alias = row.names(.),
+    !!colnames(displayTimeInBedDaily)[2] := cell_spec(.[[2]],color = ifelse(is.na(logicTimeInBed[,2]),"black",ifelse(logicTimeInBed[,2] > logicTimeInBed$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBed[,2] < logicTimeInBed$belowThresholdInBed,styleBelow,"black")))),
+    
+    !!colnames(displayTimeInBedDaily)[3] := cell_spec(.[[3]],color = ifelse(is.na(logicTimeInBed[,3]),"black",ifelse(logicTimeInBed[,3] > logicTimeInBed$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBed[,3] < logicTimeInBed$belowThresholdInBed,styleBelow,"black")))),
+    
+    !!colnames(displayTimeInBedDaily)[4] := cell_spec(.[[4]],color = ifelse(is.na(logicTimeInBed[,4]),"black",ifelse(logicTimeInBed[,4] > logicTimeInBed$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBed[,4] < logicTimeInBed$belowThresholdInBed,styleBelow,"black")))),
+    
+    !!colnames(displayTimeInBedDaily)[5] := cell_spec(.[[5]],color = ifelse(is.na(logicTimeInBed[,5]),"black",ifelse(logicTimeInBed[,5] > logicTimeInBed$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBed[,5] < logicTimeInBed$belowThresholdInBed,styleBelow,"black")))),
+    
+    !!colnames(displayTimeInBedDaily)[6] := cell_spec(.[[6]],color = ifelse(is.na(logicTimeInBed[,6]),"black",ifelse(logicTimeInBed[,6] > logicTimeInBed$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBed[,6] < logicTimeInBed$belowThresholdInBed,styleBelow,"black")))),
+    
+    !!colnames(displayTimeInBedDaily)[7] := cell_spec(.[[7]],color = ifelse(is.na(logicTimeInBed[,7]),"black", ifelse(logicTimeInBed[,7] > logicTimeInBed$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBed[,7] < logicTimeInBed$belowThresholdInBed,styleBelow,"black")))),
+    
+    !!colnames(displayTimeInBedDaily)[8] := cell_spec(.[[8]],color =  ifelse(is.na(logicTimeInBed[,8]),"black",ifelse(logicTimeInBed[,8] > logicTimeInBed$aboveThresholdInBed,styleAbove, ifelse(logicTimeInBed[,8] < logicTimeInBed$belowThresholdInBed,styleBelow,"black")))))
+
+#colnames to row names
+timeInBedDailyTable <- column_to_rownames(timeInBedDailyTable, var = "alias")
+
+if(is.null(timeInBedDailyTable)) {
+  flog.error("timeInBedDailyTable wasn't generated,LOCATION: %s",location_id)
+}
+
+
+flog.debug("Creating outHomeDaily...")
+###OutHome (Functions need to be created for this portion)
+##################################################################################
+outHomeDaily <- filterOutHomeDaily(sleepAndOut)
+
+outHomeDaily <- column_to_rownames(outHomeDaily, var = "alias")
+
+outHomeDailyAvg <- outHomeDailyAvgFunc(sleepAndOut)
+
+#Outhome logic Table
+logicOutHomeDaily <- cbind.data.frame("Historical Average"=outHomeDailyAvg,outHomeDaily)
+
+#Create a display table
+displayOutHomeDaily <- logicOutHomeDaily
+
+#Determine threshold
+aboveThresholdOut <- c()
+belowThresholdOut <- c()
+
+
+for(i in 1:nrow(logicOutHomeDaily)) {
+
+    aboveThresholdOut[i] = logicOutHomeDaily$`Historical Average`[i] * (1 + outHomeThresh) #%25
+    belowThresholdOut[i] = logicOutHomeDaily$`Historical Average`[i] * (1 - outHomeThresh) #%25
+  
+}
+
+logicOutHomeDaily <- cbind(logicOutHomeDaily,aboveThresholdOut,belowThresholdOut)
+
+#sec to hr min
+for(i in 1:ncol(displayOutHomeDaily)) {
+  displayOutHomeDaily[,i] <- secToHr(displayOutHomeDaily[,i])
+}
+
+
+
+#get ridd of 0hr
+for(i in 1:nrow(displayOutHomeDaily)) {
+  
+  for(j in 1:ncol(displayOutHomeDaily)) {
+    
+   if(str_detect(displayOutHomeDaily[i,j],"^0hr")) {
+   displayOutHomeDaily[i,j] = sub('0hr ', "", displayOutHomeDaily[i,j])
+   
+   }
+  }
+}
+
+#delete NAhr NAsc
+for(i in 1:nrow(displayOutHomeDaily)) {
+  
+  for(j in 1:ncol(displayOutHomeDaily)) {
+    
+   if(str_detect(displayOutHomeDaily[i,j],"^NA")) {
+   displayOutHomeDaily[i,j] = NA
+   }
+  }
+}
+
+flog.debug("Creating outDailyTable...,LOCATION: %s",location_id)
+outDailyTable <- displayOutHomeDaily %>%
+ mutate(
+    alias = row.names(.),
+    !!colnames(displayOutHomeDaily)[2] := tryCatch(cell_spec(.[[2]],color = ifelse(logicOutHomeDaily[,2] > logicOutHomeDaily$aboveThresholdOut,styleAbove, 
+                                                                        ifelse(logicOutHomeDaily[,2] < logicOutHomeDaily$belowThresholdOut,styleBelow,"black"))),error = function(e){  '<span style="color: black">NA</span>'}),
+    
+    !!colnames(displayOutHomeDaily)[3] := tryCatch(cell_spec(.[[3]],color = ifelse(logicOutHomeDaily[,3] > logicOutHomeDaily$aboveThresholdOut,styleAbove, 
+                                                                        ifelse(logicOutHomeDaily[,3] < logicOutHomeDaily$belowThresholdOut,styleBelow,"black"))),error = function(e){  '<span style="color: black">NA</span>'}),
+    
+    !!colnames(displayOutHomeDaily)[4] := tryCatch(cell_spec(.[[4]],color = ifelse(logicOutHomeDaily[,4] > logicOutHomeDaily$aboveThresholdOut,styleAbove, 
+                                                                        ifelse(logicOutHomeDaily[,4] < logicOutHomeDaily$belowThresholdOut,styleBelow,"black"))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(displayOutHomeDaily)[5] := tryCatch(cell_spec(.[[5]],color = ifelse(logicOutHomeDaily[,5] > logicOutHomeDaily$aboveThresholdOut,styleAbove, 
+                                                                        ifelse(logicOutHomeDaily[,5] < logicOutHomeDaily$belowThresholdOut,styleBelow,"black"))),error = function(e){  '<span style="color: black">NA</span>'}),
+    
+    !!colnames(displayOutHomeDaily)[6] := tryCatch(cell_spec(.[[6]],color = ifelse(logicOutHomeDaily[,6] > logicOutHomeDaily$aboveThresholdOut,styleAbove, 
+                                                                        ifelse(logicOutHomeDaily[,6] < logicOutHomeDaily$belowThresholdOut,styleBelow,"black"))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(displayOutHomeDaily)[7] := tryCatch(cell_spec(.[[7]],color = ifelse(logicOutHomeDaily[,7] > logicOutHomeDaily$aboveThresholdOut,styleAbove, 
+                                                                        ifelse(logicOutHomeDaily[,7] < logicOutHomeDaily$belowThresholdOut,styleBelow,"black"))),error = function(e){ '<span style="color: black">NA</span>'}),
+    
+    !!colnames(displayOutHomeDaily)[8] := tryCatch(cell_spec(.[[8]],color = ifelse(logicOutHomeDaily[,8] > logicOutHomeDaily$aboveThresholdOut,styleAbove,
+
+ifelse(logicOutHomeDaily[,8] < logicOutHomeDaily$belowThresholdOut,styleBelow,"black"))),error = function(e){  '<span style="color: black">NA</span>'}))
+
+
+outDailyTable <- column_to_rownames(outDailyTable, var = "alias") 
+
+
+if(is.null(outDailyTable)) {
+  flog.error("outDailyTable wasn't generated,LOCATION: %s",location_id)
+}
+
+
+flog.debug("rbinding Complete Daily table")
+#Combine all three tables
+completeFinalDaily <- rbind(dailyTable,sleepDailyTable,timeInBedDailyTable,distDailyTable,outDailyTable)
+
+###We need to determine the indexes for the headers (Hygiene, Nutrition, Bathroom Usage,etc)
+##This has to be automatically because different houses may not have all the aliases 
+### add an index col for the aliasses. Determine one alias which every house have for each category.
+### Add these aliasses to the 28 days dataset as dummy rows, in case if they don't have any data recorded for 28 days
+###We should be able use same indexes for daily and weekly table
+
+markerDaily <- which(rownames(completeFinalDaily) %in% c("Time Spent In Bed","Bed Time","Wake up Time","Sleep Distruption","Time Spent Outside"))
+
+markerDaily2 <-  which(rownames(completeFinalDaily) %in% c("Time Spent Outside","Time Spent In Bed"))
+
+rownames(completeFinalDaily)[markerDaily] <- paste0(row.names(completeFinalDaily)[markerDaily],
+                                       '<span><font size="3">*</font></span>')
+
+rownames(completeFinalDaily)[markerDaily2] <- paste0(row.names(completeFinalDaily)[markerDaily2],
+                                       '<span><font size="3">†</font></span>')
+
+flog.debug("Creating Overall Daily Table,LOCATION: %s",location_id)
+#####
+DailyTable <- completeFinalDaily %>%
+  kable(escape = F,align = "c") %>%
+  kable_styling(bootstrap_options = c("hover","condensed","responsive"), font_size = 14,full_width = F) %>%
+  footnote(general = '<span style = "color:black; background-color: #BEE6FE;border-radius: 30px; padding: 3px;">Above Threshold</span>
+           <span style = "color:black; background-color: #FDDCDD;border-radius: 30px; padding: 3px;">Below Threshold</span>
+           <br>
+           <span style = color:black><font size="3">*</font> Values are calculated based on the normal status (living alone), having a companion in the house might affect these values</span>
+           <br>
+           <span style = color:black><font size="3">†</font> Total time for the entire day</span>'
+            
+           ,escape = F) %>%
+  group_rows(index = c("Hygiene"=match(vec,rownames(indexTable))[1],"Nutrition"=match(vec,rownames(indexTable))[2]-match(vec,rownames(indexTable))[1],"Bathroom Usage"=match(vec,rownames(indexTable))[3]-match(vec,rownames(indexTable))[2],"Daily Activities"=max(index)-match(vec,rownames(indexTable))[3]),
+label_row_css = "background-color: #3CC47C; color: #fff;") %>% #Try with differentcollors
+  column_spec(2, background = "#ECEBEB") %>%
+  row_spec(0,bold = T,color = "#EFEFEF",background = "#1E392A",font_size = 15) 
+
+flog.debug("DONE %s",location_id)
+
+
+DailyTable
+
+```

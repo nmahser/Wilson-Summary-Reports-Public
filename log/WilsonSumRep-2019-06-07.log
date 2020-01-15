@@ -1,0 +1,370 @@
+DEBUG [2019-06-07 22:50:04] Requested date is 2019-06-07
+DEBUG [2019-06-07 22:50:04] Connecting zproc for lowLevelData..., LOCATION: 8
+DEBUG [2019-06-07 22:50:04] Getting lowLevelData..., LOCATION: 8
+DEBUG [2019-06-07 22:50:04] Connecting to Zproc for highLevelSensorData 8
+DEBUG [2019-06-07 22:50:19] Getting highLevelData...
+DEBUG [2019-06-07 22:50:19] Import data for location = 8 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:50:19] Getting location table...
+DEBUG [2019-06-07 22:50:19] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:50:20] highLevel query is Null, trial: 1
+DEBUG [2019-06-07 22:50:27] Import data for location = 8 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:50:27] Getting location table...
+DEBUG [2019-06-07 22:50:27] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:50:27] highLevel query is Null, trial: 2
+DEBUG [2019-06-07 22:50:34] Import data for location = 8 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:50:34] Getting location table...
+DEBUG [2019-06-07 22:50:34] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:50:34] highLevel query is Null, trial: 3
+DEBUG [2019-06-07 22:50:41] Import data for location = 8 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:50:41] Getting location table...
+DEBUG [2019-06-07 22:50:41] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:50:42] highLevel query is Null, trial: 4
+DEBUG [2019-06-07 22:50:49] Import data for location = 8 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:50:49] Getting location table...
+DEBUG [2019-06-07 22:50:49] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:50:49] highLevel query is Null, trial: 5
+DEBUG [2019-06-07 22:50:56] Import data for location = 8 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:50:56] Getting location table...
+DEBUG [2019-06-07 22:50:56] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:50:56] highLevel query is Null, trial: 6
+DEBUG [2019-06-07 22:51:03] Import data for location = 8 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:51:03] Getting location table...
+DEBUG [2019-06-07 22:51:03] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:51:04] highLevel query is Null, trial: 7
+DEBUG [2019-06-07 22:51:11] Import data for location = 8 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:51:11] Getting location table...
+DEBUG [2019-06-07 22:51:11] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:51:11] Getting longterm table...
+DEBUG [2019-06-07 22:51:12] Getting track_position...
+DEBUG [2019-06-07 22:51:18] Getting out_estimate
+DEBUG [2019-06-07 22:51:19] Getting sleep_estimate
+DEBUG [2019-06-07 22:51:21] Creating weeklyTable for count & time (lowlevel) data, LOCATION: 8
+DEBUG [2019-06-07 22:51:21] Organizing sleepData,LOCATION: 8
+DEBUG [2019-06-07 22:51:22] Combining logicSleepWeekly and threshold values, LOCATION: 8
+DEBUG [2019-06-07 22:51:22] Creating sleepWeeklyTable
+DEBUG [2019-06-07 22:51:22] Creating sleepDistWeekly...
+DEBUG [2019-06-07 22:51:22] Creating sleepDistWeekly Table
+DEBUG [2019-06-07 22:51:22] Creating timeInBedWeekly...,LOCATION: 8
+DEBUG [2019-06-07 22:51:22] Creating timeInBedWeeklyTable..., LOCATION: 8
+DEBUG [2019-06-07 22:51:22] Creating outHomeWeekly...
+DEBUG [2019-06-07 22:51:22] Creating outWeeklyTable..., LOCATION: 8
+DEBUG [2019-06-07 22:51:22] Overall weekly table rbinding..., LOCATION: 8
+DEBUG [2019-06-07 22:51:22] Create index value for auto-generating row headers (Hygiene,etc.)
+DEBUG [2019-06-07 22:51:22] Creating Overall Weekly Table, LOCATION: 8
+DEBUG [2019-06-07 22:51:23] Determining threshold values for daily table, LOCATION: 8
+DEBUG [2019-06-07 22:51:23] Creating daily table for count&time, LOCATION: 8
+DEBUG [2019-06-07 22:51:23] Organizing daily sleep data...,LOCATION: 8
+DEBUG [2019-06-07 22:51:23] Creating sleepDailyTable...,LOCATION: 8
+DEBUG [2019-06-07 22:51:23] Creating sleepDistDaily...
+DEBUG [2019-06-07 22:51:23] Creating distDailyTable,LOCATION: 8
+DEBUG [2019-06-07 22:51:23] Creating timeInBed for daily...
+DEBUG [2019-06-07 22:51:23] Creating timeInBedDailyTable,LOCATION: 8
+DEBUG [2019-06-07 22:51:23] Creating outHomeDaily...
+DEBUG [2019-06-07 22:51:23] Creating outDailyTable...,LOCATION: 8
+DEBUG [2019-06-07 22:51:23] rbinding Complete Daily table
+DEBUG [2019-06-07 22:51:23] Creating Overall Daily Table,LOCATION: 8
+DEBUG [2019-06-07 22:51:24] DONE 8
+DEBUG [2019-06-07 22:51:25] Requested date is 2019-06-07
+DEBUG [2019-06-07 22:51:25] Connecting zproc for lowLevelData..., LOCATION: 10
+DEBUG [2019-06-07 22:51:30] Getting lowLevelData..., LOCATION: 10
+DEBUG [2019-06-07 22:51:30] Connecting to Zproc for highLevelSensorData 10
+DEBUG [2019-06-07 22:51:41] Getting highLevelData...
+DEBUG [2019-06-07 22:51:41] Import data for location = 10 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:51:41] Getting location table...
+DEBUG [2019-06-07 22:51:41] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:51:41] Getting longterm table...
+DEBUG [2019-06-07 22:51:42] Getting track_position...
+DEBUG [2019-06-07 22:51:46] Getting out_estimate
+DEBUG [2019-06-07 22:51:47] Getting sleep_estimate
+DEBUG [2019-06-07 22:51:48] Creating weeklyTable for count & time (lowlevel) data, LOCATION: 10
+DEBUG [2019-06-07 22:51:48] Organizing sleepData,LOCATION: 10
+DEBUG [2019-06-07 22:51:48] Combining logicSleepWeekly and threshold values, LOCATION: 10
+DEBUG [2019-06-07 22:51:48] Creating sleepWeeklyTable
+DEBUG [2019-06-07 22:51:48] Creating sleepDistWeekly...
+DEBUG [2019-06-07 22:51:48] Creating sleepDistWeekly Table
+DEBUG [2019-06-07 22:51:48] Creating timeInBedWeekly...,LOCATION: 10
+DEBUG [2019-06-07 22:51:48] Creating timeInBedWeeklyTable..., LOCATION: 10
+DEBUG [2019-06-07 22:51:48] Creating outHomeWeekly...
+DEBUG [2019-06-07 22:51:48] Creating outWeeklyTable..., LOCATION: 10
+DEBUG [2019-06-07 22:51:48] Overall weekly table rbinding..., LOCATION: 10
+DEBUG [2019-06-07 22:51:48] Create index value for auto-generating row headers (Hygiene,etc.)
+DEBUG [2019-06-07 22:51:48] Creating Overall Weekly Table, LOCATION: 10
+DEBUG [2019-06-07 22:51:49] Determining threshold values for daily table, LOCATION: 10
+DEBUG [2019-06-07 22:51:49] Creating daily table for count&time, LOCATION: 10
+DEBUG [2019-06-07 22:51:49] Organizing daily sleep data...,LOCATION: 10
+DEBUG [2019-06-07 22:51:49] Creating sleepDailyTable...,LOCATION: 10
+DEBUG [2019-06-07 22:51:49] Creating sleepDistDaily...
+DEBUG [2019-06-07 22:51:49] Creating distDailyTable,LOCATION: 10
+DEBUG [2019-06-07 22:51:49] Creating timeInBed for daily...
+DEBUG [2019-06-07 22:51:49] Creating timeInBedDailyTable,LOCATION: 10
+DEBUG [2019-06-07 22:51:49] Creating outHomeDaily...
+DEBUG [2019-06-07 22:51:49] Creating outDailyTable...,LOCATION: 10
+DEBUG [2019-06-07 22:51:49] rbinding Complete Daily table
+DEBUG [2019-06-07 22:51:49] Creating Overall Daily Table,LOCATION: 10
+DEBUG [2019-06-07 22:51:49] DONE 10
+DEBUG [2019-06-07 22:51:50] Requested date is 2019-06-07
+DEBUG [2019-06-07 22:51:50] Connecting zproc for lowLevelData..., LOCATION: 13
+DEBUG [2019-06-07 22:51:55] Getting lowLevelData..., LOCATION: 13
+DEBUG [2019-06-07 22:51:56] Connecting to Zproc for highLevelSensorData 13
+DEBUG [2019-06-07 22:51:56] Getting highLevelData...
+DEBUG [2019-06-07 22:51:56] Import data for location = 13 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:51:56] Getting location table...
+DEBUG [2019-06-07 22:51:56] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:51:56] Getting longterm table...
+DEBUG [2019-06-07 22:51:58] Getting track_position...
+DEBUG [2019-06-07 22:52:11] Getting out_estimate
+DEBUG [2019-06-07 22:52:12] Getting sleep_estimate
+DEBUG [2019-06-07 22:52:13] Creating weeklyTable for count & time (lowlevel) data, LOCATION: 13
+DEBUG [2019-06-07 22:52:13] Organizing sleepData,LOCATION: 13
+DEBUG [2019-06-07 22:52:13] Combining logicSleepWeekly and threshold values, LOCATION: 13
+DEBUG [2019-06-07 22:52:13] Creating sleepWeeklyTable
+DEBUG [2019-06-07 22:52:13] Creating sleepDistWeekly...
+DEBUG [2019-06-07 22:52:13] Creating sleepDistWeekly Table
+DEBUG [2019-06-07 22:52:13] Creating timeInBedWeekly...,LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Creating timeInBedWeeklyTable..., LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Creating outHomeWeekly...
+DEBUG [2019-06-07 22:52:14] Creating outWeeklyTable..., LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Overall weekly table rbinding..., LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Create index value for auto-generating row headers (Hygiene,etc.)
+DEBUG [2019-06-07 22:52:14] Creating Overall Weekly Table, LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Determining threshold values for daily table, LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Creating daily table for count&time, LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Organizing daily sleep data...,LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Creating sleepDailyTable...,LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Creating sleepDistDaily...
+DEBUG [2019-06-07 22:52:14] Creating distDailyTable,LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Creating timeInBed for daily...
+DEBUG [2019-06-07 22:52:14] Creating timeInBedDailyTable,LOCATION: 13
+DEBUG [2019-06-07 22:52:14] Creating outHomeDaily...
+DEBUG [2019-06-07 22:52:14] Creating outDailyTable...,LOCATION: 13
+DEBUG [2019-06-07 22:52:14] rbinding Complete Daily table
+DEBUG [2019-06-07 22:52:14] Creating Overall Daily Table,LOCATION: 13
+DEBUG [2019-06-07 22:52:14] DONE 13
+DEBUG [2019-06-07 22:52:15] Requested date is 2019-06-07
+DEBUG [2019-06-07 22:52:15] Connecting zproc for lowLevelData..., LOCATION: 28
+DEBUG [2019-06-07 22:52:25] Getting lowLevelData..., LOCATION: 28
+DEBUG [2019-06-07 22:52:25] Connecting to Zproc for highLevelSensorData 28
+DEBUG [2019-06-07 22:52:26] Getting highLevelData...
+DEBUG [2019-06-07 22:52:26] Import data for location = 28 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:52:26] Getting location table...
+DEBUG [2019-06-07 22:52:26] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:52:26] Getting longterm table...
+DEBUG [2019-06-07 22:52:27] Getting track_position...
+DEBUG [2019-06-07 22:52:36] Getting out_estimate
+DEBUG [2019-06-07 22:52:37] Getting sleep_estimate
+DEBUG [2019-06-07 22:52:39] Creating weeklyTable for count & time (lowlevel) data, LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Organizing sleepData,LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Combining logicSleepWeekly and threshold values, LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Creating sleepWeeklyTable
+DEBUG [2019-06-07 22:52:39] Creating sleepDistWeekly...
+DEBUG [2019-06-07 22:52:39] Creating sleepDistWeekly Table
+DEBUG [2019-06-07 22:52:39] Creating timeInBedWeekly...,LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Creating timeInBedWeeklyTable..., LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Creating outHomeWeekly...
+DEBUG [2019-06-07 22:52:39] Creating outWeeklyTable..., LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Overall weekly table rbinding..., LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Create index value for auto-generating row headers (Hygiene,etc.)
+DEBUG [2019-06-07 22:52:39] Creating Overall Weekly Table, LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Determining threshold values for daily table, LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Creating daily table for count&time, LOCATION: 28
+DEBUG [2019-06-07 22:52:39] Organizing daily sleep data...,LOCATION: 28
+DEBUG [2019-06-07 22:52:40] Creating sleepDailyTable...,LOCATION: 28
+DEBUG [2019-06-07 22:52:40] Creating sleepDistDaily...
+DEBUG [2019-06-07 22:52:40] Creating distDailyTable,LOCATION: 28
+DEBUG [2019-06-07 22:52:40] Creating timeInBed for daily...
+DEBUG [2019-06-07 22:52:40] Creating timeInBedDailyTable,LOCATION: 28
+DEBUG [2019-06-07 22:52:40] Creating outHomeDaily...
+DEBUG [2019-06-07 22:52:40] Creating outDailyTable...,LOCATION: 28
+DEBUG [2019-06-07 22:52:40] rbinding Complete Daily table
+DEBUG [2019-06-07 22:52:40] Creating Overall Daily Table,LOCATION: 28
+DEBUG [2019-06-07 22:52:40] DONE 28
+DEBUG [2019-06-07 22:52:40] Requested date is 2019-06-07
+DEBUG [2019-06-07 22:52:40] Connecting zproc for lowLevelData..., LOCATION: 51
+DEBUG [2019-06-07 22:52:41] Getting lowLevelData..., LOCATION: 51
+DEBUG [2019-06-07 22:52:41] Connecting to Zproc for highLevelSensorData 51
+DEBUG [2019-06-07 22:52:51] Getting highLevelData...
+DEBUG [2019-06-07 22:52:51] Import data for location = 51 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:52:51] Getting location table...
+DEBUG [2019-06-07 22:52:51] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:52:51] Getting longterm table...
+DEBUG [2019-06-07 22:52:52] Getting track_position...
+DEBUG [2019-06-07 22:52:56] Getting out_estimate
+DEBUG [2019-06-07 22:52:56] Getting sleep_estimate
+DEBUG [2019-06-07 22:52:57] Creating weeklyTable for count & time (lowlevel) data, LOCATION: 51
+DEBUG [2019-06-07 22:52:57] Organizing sleepData,LOCATION: 51
+DEBUG [2019-06-07 22:52:57] Combining logicSleepWeekly and threshold values, LOCATION: 51
+DEBUG [2019-06-07 22:52:57] Creating sleepWeeklyTable
+DEBUG [2019-06-07 22:52:57] Creating sleepDistWeekly...
+DEBUG [2019-06-07 22:52:58] Creating sleepDistWeekly Table
+DEBUG [2019-06-07 22:52:58] Creating timeInBedWeekly...,LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Creating timeInBedWeeklyTable..., LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Creating outHomeWeekly...
+DEBUG [2019-06-07 22:52:58] Creating outWeeklyTable..., LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Overall weekly table rbinding..., LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Create index value for auto-generating row headers (Hygiene,etc.)
+DEBUG [2019-06-07 22:52:58] Creating Overall Weekly Table, LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Determining threshold values for daily table, LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Creating daily table for count&time, LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Organizing daily sleep data...,LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Creating sleepDailyTable...,LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Creating sleepDistDaily...
+DEBUG [2019-06-07 22:52:58] Creating distDailyTable,LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Creating timeInBed for daily...
+DEBUG [2019-06-07 22:52:58] Creating timeInBedDailyTable,LOCATION: 51
+DEBUG [2019-06-07 22:52:58] Creating outHomeDaily...
+DEBUG [2019-06-07 22:52:58] Creating outDailyTable...,LOCATION: 51
+DEBUG [2019-06-07 22:52:58] rbinding Complete Daily table
+DEBUG [2019-06-07 22:52:58] Creating Overall Daily Table,LOCATION: 51
+DEBUG [2019-06-07 22:52:58] DONE 51
+DEBUG [2019-06-07 22:52:59] Requested date is 2019-06-07
+DEBUG [2019-06-07 22:52:59] Connecting zproc for lowLevelData..., LOCATION: 52
+DEBUG [2019-06-07 22:52:59] Getting lowLevelData..., LOCATION: 52
+DEBUG [2019-06-07 22:53:00] Connecting to Zproc for highLevelSensorData 52
+DEBUG [2019-06-07 22:53:05] Getting highLevelData...
+DEBUG [2019-06-07 22:53:05] Import data for location = 52 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:53:05] Getting location table...
+DEBUG [2019-06-07 22:53:05] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:53:05] Getting longterm table...
+DEBUG [2019-06-07 22:53:06] Getting track_position...
+DEBUG [2019-06-07 22:53:12] Getting out_estimate
+DEBUG [2019-06-07 22:53:13] Getting sleep_estimate
+DEBUG [2019-06-07 22:53:14] Creating weeklyTable for count & time (lowlevel) data, LOCATION: 52
+DEBUG [2019-06-07 22:53:14] Organizing sleepData,LOCATION: 52
+DEBUG [2019-06-07 22:53:14] Combining logicSleepWeekly and threshold values, LOCATION: 52
+DEBUG [2019-06-07 22:53:14] Creating sleepWeeklyTable
+DEBUG [2019-06-07 22:53:14] Creating sleepDistWeekly...
+DEBUG [2019-06-07 22:53:15] Creating sleepDistWeekly Table
+DEBUG [2019-06-07 22:53:15] Creating timeInBedWeekly...,LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Creating timeInBedWeeklyTable..., LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Creating outHomeWeekly...
+DEBUG [2019-06-07 22:53:15] Creating outWeeklyTable..., LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Overall weekly table rbinding..., LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Create index value for auto-generating row headers (Hygiene,etc.)
+DEBUG [2019-06-07 22:53:15] Creating Overall Weekly Table, LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Determining threshold values for daily table, LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Creating daily table for count&time, LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Organizing daily sleep data...,LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Creating sleepDailyTable...,LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Creating sleepDistDaily...
+DEBUG [2019-06-07 22:53:15] Creating distDailyTable,LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Creating timeInBed for daily...
+DEBUG [2019-06-07 22:53:15] Creating timeInBedDailyTable,LOCATION: 52
+DEBUG [2019-06-07 22:53:15] Creating outHomeDaily...
+DEBUG [2019-06-07 22:53:15] Creating outDailyTable...,LOCATION: 52
+DEBUG [2019-06-07 22:53:15] rbinding Complete Daily table
+DEBUG [2019-06-07 22:53:15] Creating Overall Daily Table,LOCATION: 52
+DEBUG [2019-06-07 22:53:15] DONE 52
+DEBUG [2019-06-07 22:53:19] Requested date is 2019-06-07
+DEBUG [2019-06-07 22:53:19] Connecting zproc for lowLevelData..., LOCATION: 53
+DEBUG [2019-06-07 22:53:24] Getting lowLevelData..., LOCATION: 53
+DEBUG [2019-06-07 22:53:24] Connecting to Zproc for highLevelSensorData 53
+DEBUG [2019-06-07 22:53:29] Getting highLevelData...
+DEBUG [2019-06-07 22:53:29] Import data for location = 53 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:53:29] Getting location table...
+DEBUG [2019-06-07 22:53:29] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:53:30] Getting longterm table...
+DEBUG [2019-06-07 22:53:30] Getting track_position...
+DEBUG [2019-06-07 22:53:35] Getting out_estimate
+DEBUG [2019-06-07 22:53:36] Getting sleep_estimate
+DEBUG [2019-06-07 22:53:37] Creating weeklyTable for count & time (lowlevel) data, LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Organizing sleepData,LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Combining logicSleepWeekly and threshold values, LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Creating sleepWeeklyTable
+DEBUG [2019-06-07 22:53:37] Creating sleepDistWeekly...
+DEBUG [2019-06-07 22:53:37] Creating sleepDistWeekly Table
+DEBUG [2019-06-07 22:53:37] Creating timeInBedWeekly...,LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Creating timeInBedWeeklyTable..., LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Creating outHomeWeekly...
+DEBUG [2019-06-07 22:53:37] Creating outWeeklyTable..., LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Overall weekly table rbinding..., LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Create index value for auto-generating row headers (Hygiene,etc.)
+DEBUG [2019-06-07 22:53:37] Creating Overall Weekly Table, LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Determining threshold values for daily table, LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Creating daily table for count&time, LOCATION: 53
+DEBUG [2019-06-07 22:53:37] Organizing daily sleep data...,LOCATION: 53
+DEBUG [2019-06-07 22:53:38] Creating sleepDailyTable...,LOCATION: 53
+DEBUG [2019-06-07 22:53:38] Creating sleepDistDaily...
+DEBUG [2019-06-07 22:53:38] Creating distDailyTable,LOCATION: 53
+DEBUG [2019-06-07 22:53:38] Creating timeInBed for daily...
+DEBUG [2019-06-07 22:53:38] Creating timeInBedDailyTable,LOCATION: 53
+DEBUG [2019-06-07 22:53:38] Creating outHomeDaily...
+DEBUG [2019-06-07 22:53:38] Creating outDailyTable...,LOCATION: 53
+DEBUG [2019-06-07 22:53:38] rbinding Complete Daily table
+DEBUG [2019-06-07 22:53:38] Creating Overall Daily Table,LOCATION: 53
+DEBUG [2019-06-07 22:53:38] DONE 53
+DEBUG [2019-06-07 22:53:39] Requested date is 2019-06-07
+DEBUG [2019-06-07 22:53:39] Connecting zproc for lowLevelData..., LOCATION: 54
+DEBUG [2019-06-07 22:53:39] Getting lowLevelData..., LOCATION: 54
+DEBUG [2019-06-07 22:53:40] Connecting to Zproc for highLevelSensorData 54
+DEBUG [2019-06-07 22:53:40] Getting highLevelData...
+DEBUG [2019-06-07 22:53:40] Import data for location = 54 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:53:40] Getting location table...
+DEBUG [2019-06-07 22:53:40] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:53:40] Getting longterm table...
+DEBUG [2019-06-07 22:53:42] Getting track_position...
+DEBUG [2019-06-07 22:53:53] Getting out_estimate
+DEBUG [2019-06-07 22:53:54] Getting sleep_estimate
+DEBUG [2019-06-07 22:53:55] Creating weeklyTable for count & time (lowlevel) data, LOCATION: 54
+DEBUG [2019-06-07 22:53:55] Organizing sleepData,LOCATION: 54
+DEBUG [2019-06-07 22:53:55] Combining logicSleepWeekly and threshold values, LOCATION: 54
+DEBUG [2019-06-07 22:53:55] Creating sleepWeeklyTable
+DEBUG [2019-06-07 22:53:55] Creating sleepDistWeekly...
+DEBUG [2019-06-07 22:53:55] Creating sleepDistWeekly Table
+DEBUG [2019-06-07 22:53:55] Creating timeInBedWeekly...,LOCATION: 54
+DEBUG [2019-06-07 22:53:55] Creating timeInBedWeeklyTable..., LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Creating outHomeWeekly...
+DEBUG [2019-06-07 22:53:56] Creating outWeeklyTable..., LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Overall weekly table rbinding..., LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Create index value for auto-generating row headers (Hygiene,etc.)
+DEBUG [2019-06-07 22:53:56] Creating Overall Weekly Table, LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Determining threshold values for daily table, LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Creating daily table for count&time, LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Organizing daily sleep data...,LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Creating sleepDailyTable...,LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Creating sleepDistDaily...
+DEBUG [2019-06-07 22:53:56] Creating distDailyTable,LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Creating timeInBed for daily...
+DEBUG [2019-06-07 22:53:56] Creating timeInBedDailyTable,LOCATION: 54
+DEBUG [2019-06-07 22:53:56] Creating outHomeDaily...
+DEBUG [2019-06-07 22:53:56] Creating outDailyTable...,LOCATION: 54
+DEBUG [2019-06-07 22:53:56] rbinding Complete Daily table
+DEBUG [2019-06-07 22:53:56] Creating Overall Daily Table,LOCATION: 54
+DEBUG [2019-06-07 22:53:56] DONE 54
+DEBUG [2019-06-07 22:53:57] Requested date is 2019-06-07
+DEBUG [2019-06-07 22:53:57] Connecting zproc for lowLevelData..., LOCATION: 56
+DEBUG [2019-06-07 22:53:57] Getting lowLevelData..., LOCATION: 56
+DEBUG [2019-06-07 22:53:57] Connecting to Zproc for highLevelSensorData 56
+DEBUG [2019-06-07 22:54:02] Getting highLevelData...
+DEBUG [2019-06-07 22:54:02] Import data for location = 56 between 1557529199 and 1559944799.
+DEBUG [2019-06-07 22:54:03] Getting location table...
+DEBUG [2019-06-07 22:54:03] Getting sensor_metadata table...
+DEBUG [2019-06-07 22:54:03] Getting longterm table...
+DEBUG [2019-06-07 22:54:04] Getting track_position...
+DEBUG [2019-06-07 22:54:10] Getting out_estimate
+DEBUG [2019-06-07 22:54:11] Getting sleep_estimate
+DEBUG [2019-06-07 22:54:12] Creating weeklyTable for count & time (lowlevel) data, LOCATION: 56
+DEBUG [2019-06-07 22:54:12] Organizing sleepData,LOCATION: 56
+DEBUG [2019-06-07 22:54:12] Combining logicSleepWeekly and threshold values, LOCATION: 56
+DEBUG [2019-06-07 22:54:12] Creating sleepWeeklyTable
+DEBUG [2019-06-07 22:54:12] Creating sleepDistWeekly...
+DEBUG [2019-06-07 22:54:13] Creating sleepDistWeekly Table
+DEBUG [2019-06-07 22:54:13] Creating timeInBedWeekly...,LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Creating timeInBedWeeklyTable..., LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Creating outHomeWeekly...
+DEBUG [2019-06-07 22:54:13] Creating outWeeklyTable..., LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Overall weekly table rbinding..., LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Create index value for auto-generating row headers (Hygiene,etc.)
+DEBUG [2019-06-07 22:54:13] Creating Overall Weekly Table, LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Determining threshold values for daily table, LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Creating daily table for count&time, LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Organizing daily sleep data...,LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Creating sleepDailyTable...,LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Creating sleepDistDaily...
+DEBUG [2019-06-07 22:54:13] Creating distDailyTable,LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Creating timeInBed for daily...
+DEBUG [2019-06-07 22:54:13] Creating timeInBedDailyTable,LOCATION: 56
+DEBUG [2019-06-07 22:54:13] Creating outHomeDaily...
+DEBUG [2019-06-07 22:54:13] Creating outDailyTable...,LOCATION: 56
+DEBUG [2019-06-07 22:54:13] rbinding Complete Daily table
+DEBUG [2019-06-07 22:54:13] Creating Overall Daily Table,LOCATION: 56
+DEBUG [2019-06-07 22:54:13] DONE 56

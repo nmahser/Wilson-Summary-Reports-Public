@@ -1,0 +1,279 @@
+name: HomeSense Summary Report
+library:
+source:
+  - "runRmd.R"
+functions:
+  runRmd: runRmd
+location:
+  - location_id: 8
+    cron:
+    params:
+      end_date: today()
+      timeInShower: 0.4
+      fridgeOpening: 0.4
+      timeUsingTv: 0.4
+      timeUsingTvInBedroom: 0.4
+      timeInMasterBedroom: 0.3
+      timeInGuestBedroom: 0.3
+      toiletFlushMaster: 0.3
+      toiletFlushGuest: 0.3
+      coffeePotUsage: 0.3
+      timeInKitchen: 0.5
+      pantryOpenning: 0.5
+      microwaveUsage: 0.5
+      toasterUsage: 0.5
+      timeInLivingRoom: 0.5
+      timeInOffice: 0.5
+      timeUsingWashingMachine: 0.35
+      wakeupTime: 10800 #in seconds; equivalent 3 hours above&below
+      bedTime: 10800
+      outHomeThresh: 0.25
+      timeInBedThresh: 0.3
+      sleepDistThreshold: 0.5
+      others: 0.5 #in case if there is any alias which doesn't have threshold value assigned
+    actions: 
+        email: ...@email.com
+        email2: ...@email.com
+        
+
+  - location_id: 10
+    cron:
+    params:
+      end_date: today()
+      timeInShower: 0.4
+      fridgeOpening: 0.4
+      timeUsingTv: 0.4
+      timeUsingTvInBedroom: 0.4
+      timeInMasterBedroom: 0.3
+      timeInGuestBedroom: 0.3
+      toiletFlushMaster: 0.3
+      toiletFlushGuest: 0.3
+      coffeePotUsage: 0.3
+      timeInKitchen: 0.5
+      pantryOpenning: 0.5
+      microwaveUsage: 0.5
+      toasterUsage: 0.5
+      timeInLivingRoom: 0.5
+      timeInOffice: 0.5
+      timeUsingWashingMachine: 0.35
+      wakeupTime: 10800 #in seconds; equivalent 3 hours above&below
+      bedTime: 10800
+      outHomeThresh: 0.25
+      timeInBedThresh: 0.3
+      sleepDistThreshold: 0.5
+      others: 0.5 #in case if there is any alias which doesn't have threshold value assigned
+    actions: 
+        email: ...@email.com
+        email2: ...@email.com
+        
+  - location_id: 13
+    cron:
+    params:
+      end_date: today()
+      timeInShower: 0.4
+      fridgeOpening: 0.4
+      timeUsingTv: 0.4
+      timeUsingTvInBedroom: 0.4
+      timeInMasterBedroom: 0.3
+      timeInGuestBedroom: 0.3
+      toiletFlushMaster: 0.3
+      toiletFlushGuest: 0.3
+      coffeePotUsage: 0.3
+      timeInKitchen: 0.5
+      pantryOpenning: 0.5
+      microwaveUsage: 0.5
+      toasterUsage: 0.5
+      timeInLivingRoom: 0.5
+      timeInOffice: 0.5
+      timeUsingWashingMachine: 0.35
+      wakeupTime: 10800 #in seconds; equivalent 3 hours above&below
+      bedTime: 10800
+      outHomeThresh: 0.25
+      timeInBedThresh: 0.3
+      sleepDistThreshold: 0.5
+      others: 0.5 #in case if there is any alias which doesn't have threshold value assigned
+    actions: 
+        email: ...@email.com
+        email2: ...@email.com
+  
+  - location_id: 28
+    cron:
+    params:
+      end_date: today()
+      timeInShower: 0.4
+      fridgeOpening: 0.4
+      timeUsingTv: 0.4
+      timeUsingTvInBedroom: 0.4
+      timeInMasterBedroom: 0.3
+      timeInGuestBedroom: 0.3
+      toiletFlushMaster: 0.3
+      toiletFlushGuest: 0.3
+      coffeePotUsage: 0.3
+      timeInKitchen: 0.5
+      pantryOpenning: 0.5
+      microwaveUsage: 0.5
+      toasterUsage: 0.5
+      timeInLivingRoom: 0.5
+      timeInOffice: 0.5
+      timeUsingWashingMachine: 0.35
+      wakeupTime: 10800 #in seconds; equivalent 3 hours above&below
+      bedTime: 10800
+      outHomeThresh: 0.25
+      timeInBedThresh: 0.3
+      sleepDistThreshold: 0.5
+      others: 0.5 #in case if there is any alias which doesn't have threshold value assigned
+    actions: 
+        email: ...@email.com
+        email2: ...@email.com
+        
+  - location_id: 51
+    cron:
+    params:
+      end_date: today()
+      timeInShower: 0.4
+      fridgeOpening: 0.4
+      timeUsingTv: 0.4
+      timeUsingTvInBedroom: 0.4
+      timeInMasterBedroom: 0.3
+      timeInGuestBedroom: 0.3
+      toiletFlushMaster: 0.3
+      toiletFlushGuest: 0.3
+      coffeePotUsage: 0.3
+      timeInKitchen: 0.5
+      pantryOpenning: 0.5
+      microwaveUsage: 0.5
+      toasterUsage: 0.5
+      timeInLivingRoom: 0.5
+      timeInOffice: 0.5
+      timeUsingWashingMachine: 0.35
+      wakeupTime: 10800 #in seconds; equivalent 3 hours above&below
+      bedTime: 10800
+      outHomeThresh: 0.25
+      timeInBedThresh: 0.3
+      sleepDistThreshold: 0.5
+      others: 0.5 #in case if there is any alias which doesn't have threshold value assigned
+    actions: 
+        email: ...@email.com
+        email2: ...@email.com
+        
+  - location_id: 52
+    cron:
+    params:
+      end_date: today()
+      timeInShower: 0.4
+      fridgeOpening: 0.4
+      timeUsingTv: 0.4
+      timeUsingTvInBedroom: 0.4
+      timeInMasterBedroom: 0.3
+      timeInGuestBedroom: 0.3
+      toiletFlushMaster: 0.3
+      toiletFlushGuest: 0.3
+      coffeePotUsage: 0.3
+      timeInKitchen: 0.5
+      pantryOpenning: 0.5
+      microwaveUsage: 0.5
+      toasterUsage: 0.5
+      timeInLivingRoom: 0.5
+      timeInOffice: 0.5
+      timeUsingWashingMachine: 0.35
+      wakeupTime: 10800 #in seconds; equivalent 3 hours above&below
+      bedTime: 10800
+      outHomeThresh: 0.25
+      timeInBedThresh: 0.3
+      sleepDistThreshold: 0.5
+      others: 0.5 #in case if there is any alias which doesn't have threshold value assigned
+    actions: 
+        email: ...@email.com
+        email2: ...@email.com
+        
+  - location_id: 53
+    cron:
+    params:
+      end_date: today()
+      timeInShower: 0.4
+      fridgeOpening: 0.4
+      timeUsingTv: 0.4
+      timeUsingTvInBedroom: 0.4
+      timeInMasterBedroom: 0.3
+      timeInGuestBedroom: 0.3
+      toiletFlushMaster: 0.3
+      toiletFlushGuest: 0.3
+      coffeePotUsage: 0.3
+      timeInKitchen: 0.5
+      pantryOpenning: 0.5
+      microwaveUsage: 0.5
+      toasterUsage: 0.5
+      timeInLivingRoom: 0.5
+      timeInOffice: 0.5
+      timeUsingWashingMachine: 0.35
+      wakeupTime: 10800 #in seconds; equivalent 3 hours above&below
+      bedTime: 10800
+      outHomeThresh: 0.25
+      timeInBedThresh: 0.3
+      sleepDistThreshold: 0.5
+      others: 0.5 #in case if there is any alias which doesn't have threshold value assigned
+    actions: 
+        email: ...@email.com
+        email2: ...@email.com
+        
+  - location_id: 54
+    cron:
+    params:
+      end_date: today()
+      timeInShower: 0.4
+      fridgeOpening: 0.4
+      timeUsingTv: 0.4
+      timeUsingTvInBedroom: 0.4
+      timeInMasterBedroom: 0.3
+      timeInGuestBedroom: 0.3
+      toiletFlushMaster: 0.3
+      toiletFlushGuest: 0.3
+      coffeePotUsage: 0.3
+      timeInKitchen: 0.5
+      pantryOpenning: 0.5
+      microwaveUsage: 0.5
+      toasterUsage: 0.5
+      timeInLivingRoom: 0.5
+      timeInOffice: 0.5
+      timeUsingWashingMachine: 0.35
+      wakeupTime: 10800 #in seconds; equivalent 3 hours above&below
+      bedTime: 10800
+      outHomeThresh: 0.25
+      timeInBedThresh: 0.3
+      sleepDistThreshold: 0.5
+      others: 0.5 #in case if there is any alias which doesn't have threshold value assigned
+    actions: 
+        email: ...@email.com
+        email2: ...@email.com
+
+
+  - location_id: 56
+    cron:
+    params:
+      end_date: today()
+      timeInShower: 0.4
+      fridgeOpening: 0.4
+      timeUsingTv: 0.4
+      timeUsingTvInBedroom: 0.4
+      timeInMasterBedroom: 0.3
+      timeInGuestBedroom: 0.3
+      toiletFlushMaster: 0.3
+      toiletFlushGuest: 0.3
+      coffeePotUsage: 0.3
+      timeInKitchen: 0.5
+      pantryOpenning: 0.5
+      microwaveUsage: 0.5
+      toasterUsage: 0.5
+      timeInLivingRoom: 0.5
+      timeInOffice: 0.5
+      timeUsingWashingMachine: 0.35
+      wakeupTime: 10800 #in seconds; equivalent 3 hours above&below
+      bedTime: 10800
+      outHomeThresh: 0.25
+      timeInBedThresh: 0.3
+      sleepDistThreshold: 0.5
+      others: 0.5 #in case if there is any alias which doesn't have threshold value assigned
+    actions: 
+        email: ...@email.com
+        email2: ...@email.com
+        
