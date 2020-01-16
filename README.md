@@ -2,6 +2,8 @@
 
 Dynamic report generating tool to view activities in the houses on a daily/weekly basis.
 
+![summaryReport_lower](https://user-images.githubusercontent.com/20258893/72487192-2b2daa80-37db-11ea-948a-28afc625f029.gif)
+
 ## Instalation / Preparation
 
   git clone `https://github.com/CreateHealth/Wilson_Summary_Reports.git` <br>
